@@ -1,9 +1,12 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
 
 import com.splitscale.reems.energy.consumption.EnergyConsumption;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Date;
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class EnergyConsumptionTest {
 
@@ -31,14 +34,14 @@ public class EnergyConsumptionTest {
     );
 
     // Test the getters
-    Assert.assertEquals(id, energyConsumption.getId());
-    Assert.assertEquals(propertyId, energyConsumption.getPropertyId());
-    Assert.assertEquals(propertyName, energyConsumption.getPropertyName());
-    Assert.assertEquals(usage, energyConsumption.getUsage());
-    Assert.assertEquals(consumed, energyConsumption.getConsumed());
-    Assert.assertEquals(amount, energyConsumption.getAmount());
-    Assert.assertEquals(created, energyConsumption.getCreated());
-    Assert.assertEquals(modified, energyConsumption.getModified());
+    assertEquals(id, energyConsumption.getId());
+    assertEquals(propertyId, energyConsumption.getPropertyId());
+    assertEquals(propertyName, energyConsumption.getPropertyName());
+    assertEquals(usage, energyConsumption.getUsage());
+    assertEquals(consumed, energyConsumption.getConsumed());
+    assertEquals(amount, energyConsumption.getAmount());
+    assertEquals(created, energyConsumption.getCreated());
+    assertEquals(modified, energyConsumption.getModified());
 
     // Test the setters
     String newId = "2";
@@ -60,13 +63,13 @@ public class EnergyConsumptionTest {
     energyConsumption.setModified(newModified);
 
     // Test the updated values
-    Assert.assertEquals(newId, energyConsumption.getId());
-    Assert.assertEquals(newPropertyId, energyConsumption.getPropertyId());
-    Assert.assertEquals(newPropertyName, energyConsumption.getPropertyName());
-    Assert.assertEquals(newUsage, energyConsumption.getUsage());
-    Assert.assertEquals(newConsumed, energyConsumption.getConsumed());
-    Assert.assertEquals(newAmount, energyConsumption.getAmount());
-    Assert.assertEquals(newCreated, energyConsumption.getCreated());
-    Assert.assertEquals(newModified, energyConsumption.getModified());
+    assertEquals(newId, energyConsumption.getId());
+    assertEquals(newPropertyId, energyConsumption.getPropertyId());
+    assertEquals(newPropertyName, energyConsumption.getPropertyName());
+    assertEquals(newUsage, energyConsumption.getUsage());
+    assertEquals(newConsumed, energyConsumption.getConsumed());
+    assertEquals(newAmount, energyConsumption.getAmount());
+    assertEquals(newCreated, energyConsumption.getCreated());
+    assertEquals(newModified, energyConsumption.getModified());
   }
 }

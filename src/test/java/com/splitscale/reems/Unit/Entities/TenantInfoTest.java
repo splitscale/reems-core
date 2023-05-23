@@ -1,8 +1,9 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.splitscale.reems.tenantinfo.TenantInfo;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TenantInfoTest {
 
@@ -16,9 +17,9 @@ public class TenantInfoTest {
     TenantInfo tenantInfo = new TenantInfo(id, tenantName, propertyName);
 
     // Test the getters
-    Assert.assertEquals(id, tenantInfo.getId());
-    Assert.assertEquals(tenantName, tenantInfo.getTenantName());
-    Assert.assertEquals(propertyName, tenantInfo.getPropertyName());
+    assertEquals(id, tenantInfo.getId());
+    assertEquals(tenantName, tenantInfo.getTenantName());
+    assertEquals(propertyName, tenantInfo.getPropertyName());
 
     // Test the setters
     String newId = "2";
@@ -30,8 +31,8 @@ public class TenantInfoTest {
     tenantInfo.setPropertyName(newPropertyName);
 
     // Test the updated values
-    Assert.assertEquals(newId, tenantInfo.getId());
-    Assert.assertEquals(newTenantName, tenantInfo.getTenantName());
-    Assert.assertEquals(newPropertyName, tenantInfo.getPropertyName());
+    assertEquals(newId, tenantInfo.getId());
+    assertEquals(newTenantName, tenantInfo.getTenantName());
+    assertEquals(newPropertyName, tenantInfo.getPropertyName());
   }
 }

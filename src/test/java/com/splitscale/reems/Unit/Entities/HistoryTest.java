@@ -1,9 +1,10 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.splitscale.reems.history.History;
 import java.util.Date;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class HistoryTest {
 
@@ -18,10 +19,10 @@ public class HistoryTest {
     History history = new History(id, header, body, created);
 
     // Test the getters
-    Assert.assertEquals(id, history.getId());
-    Assert.assertEquals(header, history.getHeader());
-    Assert.assertEquals(body, history.getBody());
-    Assert.assertEquals(created, history.getCreated());
+    assertEquals(id, history.getId());
+    assertEquals(header, history.getHeader());
+    assertEquals(body, history.getBody());
+    assertEquals(created, history.getCreated());
 
     // Test the setters
     String newId = "2";
@@ -35,9 +36,9 @@ public class HistoryTest {
     history.setCreated(newCreated);
 
     // Test the updated values
-    Assert.assertEquals(newId, history.getId());
-    Assert.assertEquals(newHeader, history.getHeader());
-    Assert.assertEquals(newBody, history.getBody());
-    Assert.assertEquals(newCreated, history.getCreated());
+    assertEquals(newId, history.getId());
+    assertEquals(newHeader, history.getHeader());
+    assertEquals(newBody, history.getBody());
+    assertEquals(newCreated, history.getCreated());
   }
 }

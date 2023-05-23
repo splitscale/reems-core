@@ -1,9 +1,10 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.splitscale.reems.hazard.environment.EnvironmentalHazard;
 import java.util.Date;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class EnvironmentalHazardTest {
 
@@ -36,16 +37,16 @@ public class EnvironmentalHazardTest {
     );
 
     // Test the getters
-    Assert.assertEquals(id, hazard.getId());
-    Assert.assertEquals(propertyId, hazard.getPropertyId());
-    Assert.assertEquals(title, hazard.getTitle());
-    Assert.assertEquals(category, hazard.getCategory());
-    Assert.assertEquals(description, hazard.getDescription());
-    Assert.assertEquals(propertyName, hazard.getPropertyName());
-    Assert.assertEquals(riskLevel, hazard.getRiskLevel());
-    Assert.assertEquals(mitigationStatus, hazard.getMitigationStatus());
-    Assert.assertEquals(created, hazard.getCreated());
-    Assert.assertEquals(modified, hazard.getModified());
+    assertEquals(id, hazard.getId());
+    assertEquals(propertyId, hazard.getPropertyId());
+    assertEquals(title, hazard.getTitle());
+    assertEquals(category, hazard.getCategory());
+    assertEquals(description, hazard.getDescription());
+    assertEquals(propertyName, hazard.getPropertyName());
+    assertEquals(riskLevel, hazard.getRiskLevel());
+    assertEquals(mitigationStatus, hazard.getMitigationStatus());
+    assertEquals(created, hazard.getCreated());
+    assertEquals(modified, hazard.getModified());
 
     // Test the setters
     String newId = "2";
@@ -71,15 +72,15 @@ public class EnvironmentalHazardTest {
     hazard.setModified(newModified);
 
     // Test the updated values
-    Assert.assertEquals(newId, hazard.getId());
-    Assert.assertEquals(newPropertyId, hazard.getPropertyId());
-    Assert.assertEquals(newTitle, hazard.getTitle());
-    Assert.assertEquals(newCategory, hazard.getCategory());
-    Assert.assertEquals(newDescription, hazard.getDescription());
-    Assert.assertEquals(newPropertyName, hazard.getPropertyName());
-    Assert.assertEquals(newRiskLevel, hazard.getRiskLevel());
-    Assert.assertEquals(newMitigationStatus, hazard.getMitigationStatus());
-    Assert.assertEquals(newCreated, hazard.getCreated());
-    Assert.assertEquals(newModified, hazard.getModified());
+    assertEquals(newId, hazard.getId());
+    assertEquals(newPropertyId, hazard.getPropertyId());
+    assertEquals(newTitle, hazard.getTitle());
+    assertEquals(newCategory, hazard.getCategory());
+    assertEquals(newDescription, hazard.getDescription());
+    assertEquals(newPropertyName, hazard.getPropertyName());
+    assertEquals(newRiskLevel, hazard.getRiskLevel());
+    assertEquals(newMitigationStatus, hazard.getMitigationStatus());
+    assertEquals(newCreated, hazard.getCreated());
+    assertEquals(newModified, hazard.getModified());
   }
 }

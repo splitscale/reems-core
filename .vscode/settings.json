@@ -3,5 +3,6 @@
     "Interactor",
     "reems",
     "splitscale"
-  ]
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

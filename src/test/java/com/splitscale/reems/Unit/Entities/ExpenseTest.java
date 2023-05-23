@@ -1,9 +1,10 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.splitscale.reems.expenses.Expense;
 import java.util.Date;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ExpenseTest {
 
@@ -18,10 +19,10 @@ public class ExpenseTest {
     Expense expenseObj = new Expense(id, expense, created, modified);
 
     // Test the getters
-    Assert.assertEquals(id, expenseObj.getId());
-    Assert.assertEquals(expense, expenseObj.getExpense());
-    Assert.assertEquals(created, expenseObj.getCreated());
-    Assert.assertEquals(modified, expenseObj.getModified());
+    assertEquals(id, expenseObj.getId());
+    assertEquals(expense, expenseObj.getExpense());
+    assertEquals(created, expenseObj.getCreated());
+    assertEquals(modified, expenseObj.getModified());
 
     // Test the setters
     String newId = "2";
@@ -35,9 +36,9 @@ public class ExpenseTest {
     expenseObj.setModified(newModified);
 
     // Test the updated values
-    Assert.assertEquals(newId, expenseObj.getId());
-    Assert.assertEquals(newExpense, expenseObj.getExpense());
-    Assert.assertEquals(newCreated, expenseObj.getCreated());
-    Assert.assertEquals(newModified, expenseObj.getModified());
+    assertEquals(newId, expenseObj.getId());
+    assertEquals(newExpense, expenseObj.getExpense());
+    assertEquals(newCreated, expenseObj.getCreated());
+    assertEquals(newModified, expenseObj.getModified());
   }
 }

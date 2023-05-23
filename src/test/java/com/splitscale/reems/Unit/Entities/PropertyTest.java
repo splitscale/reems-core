@@ -1,8 +1,9 @@
-package com.splitscale.reems.Unit;
+package com.splitscale.reems.Unit.Entities;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.splitscale.reems.properties.Property;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class PropertyTest {
 
@@ -17,10 +18,10 @@ public class PropertyTest {
     Property property = new Property(id, name, location, status);
 
     // Test the getters
-    Assert.assertEquals(id, property.getId());
-    Assert.assertEquals(name, property.getName());
-    Assert.assertEquals(location, property.getLocation());
-    Assert.assertEquals(status, property.getStatus());
+    assertEquals(id, property.getId());
+    assertEquals(name, property.getName());
+    assertEquals(location, property.getLocation());
+    assertEquals(status, property.getStatus());
 
     // Test the setters
     String newId = "2";
@@ -34,9 +35,9 @@ public class PropertyTest {
     property.setStatus(newStatus);
 
     // Test the updated values
-    Assert.assertEquals(newId, property.getId());
-    Assert.assertEquals(newName, property.getName());
-    Assert.assertEquals(newLocation, property.getLocation());
-    Assert.assertEquals(newStatus, property.getStatus());
+    assertEquals(newId, property.getId());
+    assertEquals(newName, property.getName());
+    assertEquals(newLocation, property.getLocation());
+    assertEquals(newStatus, property.getStatus());
   }
 }
