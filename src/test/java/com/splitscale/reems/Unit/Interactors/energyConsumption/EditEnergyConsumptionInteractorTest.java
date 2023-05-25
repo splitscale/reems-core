@@ -1,4 +1,4 @@
-package com.splitscale.reems.Unit.Interactors;
+package com.splitscale.reems.Unit.Interactors.energyConsumption;
 
 import static org.mockito.Mockito.verify;
 

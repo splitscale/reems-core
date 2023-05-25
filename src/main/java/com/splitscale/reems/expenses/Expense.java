@@ -47,4 +47,7 @@ public class Expense {
   public void setModified(Date modified) {
     this.modified = modified;
   }
+
+public void setDescription(String string) {
+}
 }
