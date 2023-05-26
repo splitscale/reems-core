@@ -16,6 +16,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class ReadExpenseInteractorTest {
+
   @Mock
   private ExpenseRepository repository;
 
@@ -35,7 +36,7 @@ class ReadExpenseInteractorTest {
 
     when(repository.getAll()).thenReturn(expectedExpenses);
 
-    List<Expense> actualExpenses = interactor.getAllProperty();
+    List<Expense> actualExpenses = interactor.getAllExpense();
 
     assertEquals(expectedExpenses, actualExpenses);
   }
@@ -47,7 +48,7 @@ class ReadExpenseInteractorTest {
 
     when(repository.getById(expenseId)).thenReturn(expectedExpense);
 
-    Expense actualExpense = interactor.getById(expenseId);
+    Expense actualExpense = interactor.getExpenseById(expenseId);
 
     assertEquals(expectedExpense, actualExpense);
   }

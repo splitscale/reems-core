@@ -8,9 +8,11 @@ import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 public class DeleteEnergyConsumptionInteractorTest {
 
   @Mock
@@ -20,14 +22,13 @@ public class DeleteEnergyConsumptionInteractorTest {
 
   @BeforeEach
   public void setup() {
-    MockitoAnnotations.initMocks(this);
     interactor = new DeleteEnergyConsumptionInteractor(repository);
   }
 
   @Test
   @DisplayName("Test Delete EnergyConsumption Interactor")
   public void testDeleteEnergyConsumption() throws IOException {
-    String id = "123456"; // ID to be deleted
+    String id = "3456"; // ID to be deleted
 
     interactor.DeleteEnergyConsumption(id);
 

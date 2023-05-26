@@ -11,9 +11,9 @@ public class HistoryTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample History instance
-    String id = "1";
-    String header = "Sample Header";
-    String body = "This is a sample history body.";
+    String id = "01";
+    String header = "Environmental Hazard";
+    String body = "Sample environmental body.";
     Date created = new Date();
 
     History history = new History(id, header, body, created);

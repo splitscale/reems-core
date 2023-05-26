@@ -1,23 +1,20 @@
 package com.splitscale.reems.Unit.Entities;
 
-import com.splitscale.reems.energy.consumption.EnergyConsumption;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.splitscale.reems.energy.consumption.EnergyConsumption;
 import java.util.Date;
-
 import org.junit.jupiter.api.Test;
 
 public class EnergyConsumptionTest {
 
   @Test
   public void testGettersAndSetters() {
-    // Create a sample EnergyConsumption instance
-    String id = "1";
-    String propertyId = "123";
+    String id = "01";
+    String propertyId = "4345";
     String propertyName = "Property A";
     String usage = "Electricity";
-    String consumed = "100 kWh";
+    String consumed = "100 kwh";
     String amount = "$50";
     Date created = new Date();
     Date modified = new Date();
@@ -45,10 +42,10 @@ public class EnergyConsumptionTest {
 
     // Test the setters
     String newId = "2";
-    String newPropertyId = "DEF456";
+    String newPropertyId = "9812";
     String newPropertyName = "New Property";
     String newUsage = "Gas";
-    String newConsumed = "50 units";
+    String newConsumed = "200kwh";
     String newAmount = "$30";
     Date newCreated = new Date();
     Date newModified = new Date();

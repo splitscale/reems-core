@@ -9,9 +9,11 @@ import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 public class EditEnergyConsumptionInteractorTest {
 
   @Mock
@@ -21,7 +23,6 @@ public class EditEnergyConsumptionInteractorTest {
 
   @BeforeEach
   public void setup() {
-    MockitoAnnotations.initMocks(this);
     interactor = new EditEnergyConsumptionInteractor(repository);
   }
 
@@ -33,7 +34,7 @@ public class EditEnergyConsumptionInteractorTest {
       "246",
       "REEMS",
       "204",
-      "1000",
+      "100kwh",
       "500",
       null,
       null

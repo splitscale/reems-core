@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class DeleteHistoryInteractorTest {
+
   @Mock
   private HistoryRepository repository;
 
@@ -27,7 +28,7 @@ class DeleteHistoryInteractorTest {
   void deleteHistory_shouldInvokeRepositoryDeleteById() throws IOException {
     String historyId = "123";
 
-    interactor.deleteHistory(historyId);
+    interactor.deleteHistoryById(historyId);
 
     verify(repository).deleteById(historyId);
   }

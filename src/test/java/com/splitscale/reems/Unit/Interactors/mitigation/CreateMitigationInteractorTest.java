@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class CreateMitigationInteractorTest {
+
   @Mock
   private MitigationRepository repository;
 
@@ -30,8 +31,8 @@ class CreateMitigationInteractorTest {
   void createMitigation_shouldReturnAddedMitigation() throws IOException {
     MitigationRequest mitigationRequest = new MitigationRequest(
       "Mitigation 1",
-      null,
-      null
+      "Sample mitigation desicription",
+      "100"
     );
     String expectedMitigationId = "123";
 

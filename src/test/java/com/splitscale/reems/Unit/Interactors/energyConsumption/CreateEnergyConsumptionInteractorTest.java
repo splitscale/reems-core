@@ -10,9 +10,9 @@ import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(MockitoExtension.class)
 public class CreateEnergyConsumptionInteractorTest {
@@ -34,7 +34,7 @@ public class CreateEnergyConsumptionInteractorTest {
       "Building A",
       "200"
     );
-    String expectedUid = "abcd1234";
+    String expectedUid = "234";
 
     when(repository.add(request)).thenReturn(expectedUid);
 

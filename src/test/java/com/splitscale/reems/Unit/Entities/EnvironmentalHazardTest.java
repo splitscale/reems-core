@@ -11,8 +11,8 @@ public class EnvironmentalHazardTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample EnvironmentalHazard instance
-    String id = "1";
-    String propertyId = "ABC123";
+    String id = "01";
+    String propertyId = "123";
     String title = "Toxic Waste";
     String category = "Chemical";
     String description =
@@ -49,8 +49,8 @@ public class EnvironmentalHazardTest {
     assertEquals(modified, hazard.getModified());
 
     // Test the setters
-    String newId = "2";
-    String newPropertyId = "DEF456";
+    String newId = "02";
+    String newPropertyId = "456";
     String newTitle = "New Hazard";
     String newCategory = "Physical";
     String newDescription = "This is a new hazard description.";

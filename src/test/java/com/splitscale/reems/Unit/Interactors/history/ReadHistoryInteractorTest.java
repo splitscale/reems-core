@@ -17,6 +17,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class ReadHistoryInteractorTest {
+
   @Mock
   private HistoryRepository repository;
 
@@ -42,7 +43,12 @@ class ReadHistoryInteractorTest {
   @Test
   void getById_shouldReturnHistoryById() throws IOException {
     String historyId = "123";
-    History expectedHistory = new History(historyId, null, null, null); // Create a sample History object for testing
+    History expectedHistory = new History(
+      historyId,
+      "Sample header",
+      "Sample body",
+      null
+    ); // Create a sample History object for testing
     when(repository.getById(historyId)).thenReturn(expectedHistory);
 
     History actualHistory = interactor.getById(historyId);

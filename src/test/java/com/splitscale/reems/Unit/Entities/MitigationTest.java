@@ -11,7 +11,7 @@ public class MitigationTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample Mitigation instance
-    String id = "1";
+    String id = "01";
     String hazardId = "ABC123";
     String task = "Clean Toxic Waste";
     String description =
@@ -40,8 +40,8 @@ public class MitigationTest {
     assertEquals(modified, mitigation.getModified());
 
     // Test the setters
-    String newId = "2";
-    String newHazardId = "DEF456";
+    String newId = "02";
+    String newHazardId = "456";
     String newTask = "New Task";
     String newDescription = "This is a new mitigation description.";
     String newCost = "2000";

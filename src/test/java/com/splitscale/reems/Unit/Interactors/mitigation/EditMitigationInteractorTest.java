@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class EditMitigationInteractorTest {
+
   @Mock
   private MitigationRepository repository;
 
@@ -27,14 +28,14 @@ class EditMitigationInteractorTest {
   @Test
   void editMitigation_shouldInvokeRepositoryUpdate() throws IOException {
     Mitigation mitigation = new Mitigation(
-      null,
-      null,
-      null,
-      null,
-      null,
+      "01",
+      "0123",
+      "Implement",
+      "Implement mitigation",
+      "100",
       null,
       null
-    ); // Create a sample Mitigation object for testing
+    );
 
     interactor.editMitigation(mitigation);
 

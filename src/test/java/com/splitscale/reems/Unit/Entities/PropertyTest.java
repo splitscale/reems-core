@@ -10,7 +10,7 @@ public class PropertyTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample Property instance
-    String id = "1";
+    String id = "01";
     String name = "Building A";
     String location = "St. San Miguel";
     String status = "Active";
@@ -24,7 +24,7 @@ public class PropertyTest {
     assertEquals(status, property.getStatus());
 
     // Test the setters
-    String newId = "2";
+    String newId = "02";
     String newName = "New Property";
     String newLocation = "New Location";
     String newStatus = "Inactive";

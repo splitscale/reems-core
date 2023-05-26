@@ -7,7 +7,7 @@ public class DeleteHistoryInteractor {
 
   private HistoryRepository repository;
 
-  public void deleteHistory(String id) throws IOException {
+  public void deleteHistoryById(String id) throws IOException {
     repository.deleteById(id);
   }
 

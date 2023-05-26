@@ -10,7 +10,7 @@ public class TenantInfoTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample TenantInfo instance
-    String id = "1";
+    String id = "01";
     String tenantName = "Jiv DelaCruz";
     String propertyName = "Building A";
 
@@ -22,7 +22,7 @@ public class TenantInfoTest {
     assertEquals(propertyName, tenantInfo.getPropertyName());
 
     // Test the setters
-    String newId = "2";
+    String newId = "02";
     String newTenantName = "Jane Smith";
     String newPropertyName = "New Property";
 

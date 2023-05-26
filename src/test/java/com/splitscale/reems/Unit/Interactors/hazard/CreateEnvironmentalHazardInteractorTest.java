@@ -30,11 +30,11 @@ class CreateEnvironmentalHazardInteractorTest {
   void createEnvironmentalHazard_shouldReturnAddedHazard() throws IOException {
     EnvironmentalHazardRequest hazardRequest = new EnvironmentalHazardRequest(
       "Hazard 1",
-      null,
-      null,
-      null,
-      null,
-      null
+      "Chemical",
+      "Description of a hazard",
+      "Property A",
+      "High",
+      "InProgress"
     );
     String expectedHazardId = "123";
 

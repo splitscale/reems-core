@@ -16,6 +16,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class ReadEnvironmentalHazardInteractorTest {
+
   @Mock
   private EnvironmentalHazardRepository repository;
 
@@ -71,12 +72,12 @@ class ReadEnvironmentalHazardInteractorTest {
     EnvironmentalHazard expectedHazard = new EnvironmentalHazard(
       "123",
       "Hazard 123",
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      "Hazard",
+      "Chemical",
+      "Sample Hazard Description",
+      "Property A",
+      "High",
+      "InProgress",
       null,
       null
     );

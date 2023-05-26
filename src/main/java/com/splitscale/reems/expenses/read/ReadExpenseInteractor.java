@@ -13,11 +13,11 @@ public class ReadExpenseInteractor {
     this.repository = repository;
   }
 
-  public List<Expense> getAllProperty() throws IOException {
+  public List<Expense> getAllExpense() throws IOException {
     return repository.getAll();
   }
 
-  public Expense getById(String id) throws IOException {
+  public Expense getExpenseById(String id) throws IOException {
     return repository.getById(id);
   }
 }

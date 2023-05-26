@@ -17,6 +17,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class ReadMitigationInteractorTest {
+
   @Mock
   private MitigationRepository repository;
 
@@ -30,7 +31,7 @@ class ReadMitigationInteractorTest {
 
   @Test
   void getAllMitigation_shouldReturnListOfMitigations() throws IOException {
-    List<Mitigation> expectedMitigations = new ArrayList<>(); // Create a sample list of mitigations for testing
+    List<Mitigation> expectedMitigations = new ArrayList<>();
     when(repository.getAll()).thenReturn(expectedMitigations);
 
     List<Mitigation> actualMitigations = interactor.getAllMitigation();
@@ -44,10 +45,10 @@ class ReadMitigationInteractorTest {
     String mitigationId = "123";
     Mitigation expectedMitigation = new Mitigation(
       mitigationId,
-      null,
-      null,
-      null,
-      null,
+      "1233",
+      "Mitigate hazard",
+      "Sample description",
+      "100",
       null,
       null
     ); // Create a sample Mitigation object for testing

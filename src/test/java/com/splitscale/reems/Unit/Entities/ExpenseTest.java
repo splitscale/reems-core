@@ -11,8 +11,8 @@ public class ExpenseTest {
   @Test
   public void testGettersAndSetters() {
     // Create a sample Expense instance
-    String id = "1";
-    String expense = "124221";
+    String id = "01";
+    String expense = "4221";
     Date created = new Date();
     Date modified = new Date();
 
@@ -25,8 +25,8 @@ public class ExpenseTest {
     assertEquals(modified, expenseObj.getModified());
 
     // Test the setters
-    String newId = "2";
-    String newExpense = "3443563";
+    String newId = "02";
+    String newExpense = "3563";
     Date newCreated = new Date();
     Date newModified = new Date();
 

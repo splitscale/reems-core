@@ -12,9 +12,11 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 public class ReadEnergyConsumptionInteractorTest {
 
   @Mock
@@ -24,7 +26,6 @@ public class ReadEnergyConsumptionInteractorTest {
 
   @BeforeEach
   public void setup() {
-    MockitoAnnotations.initMocks(this);
     interactor = new ReadEnergyConsumptionInteractor(repository);
   }
 
@@ -43,7 +44,7 @@ public class ReadEnergyConsumptionInteractorTest {
   @Test
   @DisplayName("Test Get EnergyConsumption by ID")
   public void testGetEnergyConsumptionById() throws IOException {
-    String id = "123456"; // ID of the EnergyConsumption to retrieve
+    String id = "123456";
     EnergyConsumption expectedEnergyConsumption = new EnergyConsumption(
       "1",
       "2",

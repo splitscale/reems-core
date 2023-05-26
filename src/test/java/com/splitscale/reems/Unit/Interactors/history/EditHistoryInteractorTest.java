@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class EditHistoryInteractorTest {
+
   @Mock
   private HistoryRepository repository;
 
@@ -26,7 +27,7 @@ class EditHistoryInteractorTest {
 
   @Test
   void editHistory_shouldInvokeRepositoryUpdate() throws IOException {
-    History history = new History(null, null, null, null); // Create a sample History object for testing
+    History history = new History("01", "Sample header", "Sample body", null); // Create a sample History object for testing
 
     interactor.editHistory(history);
 

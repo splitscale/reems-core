@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 class EditEnvironmentalHazardInteractorTest {
+
   @Mock
   private EnvironmentalHazardRepository repository;
 
@@ -27,14 +28,14 @@ class EditEnvironmentalHazardInteractorTest {
   @Test
   void editEnvironmentalHazard_shouldCallUpdateMethod() throws IOException {
     EnvironmentalHazard hazard = new EnvironmentalHazard(
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      "01",
+      "1242",
+      "Hazard",
+      "Chemical",
+      "Sample Hazard Description",
+      "Property A",
+      "High",
+      "InProgress",
       null,
       null
     );
