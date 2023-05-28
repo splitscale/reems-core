@@ -28,7 +28,7 @@ class CreateTenantInfoInteractorTest {
 
   @Test
   void createTenantInfo_shouldReturnAddedTenantInfo() throws IOException {
-    TenantInfoRequest tenantInfoRequest = new TenantInfoRequest(null, null, null, null);
+    TenantInfoRequest tenantInfoRequest = new TenantInfoRequest(null, null);
     String expectedTenantInfoId = "123";
 
     when(repository.add(tenantInfoRequest)).thenReturn(expectedTenantInfoId);

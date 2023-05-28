@@ -1,6 +1,6 @@
 package com.splitscale.reems.workflow;
 
-public class TenantAndPropertyView {
+public class TenantAndProperty {
     private String tenantId;
     private String tenantName;
     private String propertyId;
