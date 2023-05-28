@@ -2,16 +2,16 @@ package com.splitscale.reems.tenantinfo;
 
 public class TenantInfoRequest {
 
+  private String id;
   private String tenantName;
-  private String propertyName;
 
-  public TenantInfoRequest() {
-    //default
+  public TenantInfoRequest(String id, String tenantName) {
+    this.id = id;
+    this.tenantName = tenantName;
   }
 
-  public TenantInfoRequest(String tenantName, String propertyName) {
-    this.tenantName = tenantName;
-    this.propertyName = propertyName;
+  public TenantInfoRequest() {
+    // default
   }
 
   public String getTenantName() {
@@ -22,11 +22,11 @@ public class TenantInfoRequest {
     this.tenantName = tenantName;
   }
 
-  public String getPropertyName() {
-    return propertyName;
+  public String getId() {
+    return id;
   }
 
-  public void setPropertyName(String propertyName) {
-    this.propertyName = propertyName;
+  public void setId(String id) {
+    this.id = id;
   }
 }
