@@ -12,10 +12,10 @@ public class EnergyConsumptionRequest {
   private String consumedValue;
   private String energyUnit;
   private String usageValue;
-  private double constPerUnit;
+  private double costPerUnit;
 
   public EnergyConsumptionRequest(String id, String expenseId, String propertyId, Date created, Date edited,
-      String consumedValue, String energyUnit, String usageValue, double constPerUnit) {
+      String consumedValue, String energyUnit, String usageValue, double costPerUnit) {
     this.id = id;
     this.expenseId = expenseId;
     this.propertyId = propertyId;
@@ -24,7 +24,7 @@ public class EnergyConsumptionRequest {
     this.consumedValue = consumedValue;
     this.energyUnit = energyUnit;
     this.usageValue = usageValue;
-    this.constPerUnit = constPerUnit;
+    this.costPerUnit = costPerUnit;
   }
 
   public String getId() {
@@ -91,11 +91,11 @@ public class EnergyConsumptionRequest {
     this.usageValue = usageValue;
   }
 
-  public double getConstPerUnit() {
-    return constPerUnit;
+  public double getCostPerUnit() {
+    return costPerUnit;
   }
 
-  public void setConstPerUnit(double constPerUnit) {
-    this.constPerUnit = constPerUnit;
+  public void setCostPerUnit(double costPerUnit) {
+    this.costPerUnit = costPerUnit;
   }
 }

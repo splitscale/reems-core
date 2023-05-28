@@ -28,16 +28,6 @@ class EditEnvironmentalHazardInteractorTest {
   @Test
   void editEnvironmentalHazard_shouldCallUpdateMethod() throws IOException {
     EnvironmentalHazard hazard = new EnvironmentalHazard(
-      "01",
-      "1242",
-      "Hazard",
-      "Chemical",
-      "Sample Hazard Description",
-      "Property A",
-      "High",
-      "InProgress",
-      null,
-      null
     );
     hazard.setId("123");
     hazard.setDescription("Updated hazard");
