@@ -13,6 +13,10 @@ public class EnvironmentalHazardRequest {
   private String description;
   private String riskLevel;
 
+  public EnvironmentalHazardRequest() {
+    // default
+  }
+
   public EnvironmentalHazardRequest(String id, String propertyId, Date created, Date modified, String category,
       String title, String description, String riskLevel) {
     this.id = id;
@@ -23,10 +27,6 @@ public class EnvironmentalHazardRequest {
     this.title = title;
     this.description = description;
     this.riskLevel = riskLevel;
-  }
-
-  public EnvironmentalHazardRequest() {
-    // default
   }
 
   public String getId() {
