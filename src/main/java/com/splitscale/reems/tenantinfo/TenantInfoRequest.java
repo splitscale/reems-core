@@ -8,9 +8,11 @@ public class TenantInfoRequest {
   private Date created;
   private Date edited;
 
-  public TenantInfoRequest(String id, String tenantName) {
+  public TenantInfoRequest(String id, String tenantName, Date created, Date edited) {
     this.id = id;
     this.tenantName = tenantName;
+    this.created = created;
+    this.edited = edited;
   }
 
   public String getId() {
@@ -28,4 +30,21 @@ public class TenantInfoRequest {
   public void setTenantName(String tenantName) {
     this.tenantName = tenantName;
   }
+
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getEdited() {
+    return edited;
+  }
+
+  public void setEdited(Date edited) {
+    this.edited = edited;
+  }
+
 }

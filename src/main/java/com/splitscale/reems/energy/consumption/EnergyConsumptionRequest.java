@@ -1,28 +1,30 @@
 package com.splitscale.reems.energy.consumption;
 
+import java.sql.Date;
+
 public class EnergyConsumptionRequest {
 
   private String id;
   private String expenseId;
   private String propertyId;
+  private Date created;
+  private Date edited;
   private String consumedValue;
   private String energyUnit;
   private String usageValue;
   private double constPerUnit;
 
-  public EnergyConsumptionRequest(String id, String expenseId, String propertyId, String consumedValue,
-      String energyUnit, String usageValue, double constPerUnit) {
+  public EnergyConsumptionRequest(String id, String expenseId, String propertyId, Date created, Date edited,
+      String consumedValue, String energyUnit, String usageValue, double constPerUnit) {
     this.id = id;
     this.expenseId = expenseId;
     this.propertyId = propertyId;
+    this.created = created;
+    this.edited = edited;
     this.consumedValue = consumedValue;
     this.energyUnit = energyUnit;
     this.usageValue = usageValue;
     this.constPerUnit = constPerUnit;
-  }
-
-  public EnergyConsumptionRequest() {
-    // default
   }
 
   public String getId() {
@@ -47,6 +49,22 @@ public class EnergyConsumptionRequest {
 
   public void setPropertyId(String propertyId) {
     this.propertyId = propertyId;
+  }
+
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getEdited() {
+    return edited;
+  }
+
+  public void setEdited(Date edited) {
+    this.edited = edited;
   }
 
   public String getConsumedValue() {
@@ -80,5 +98,4 @@ public class EnergyConsumptionRequest {
   public void setConstPerUnit(double constPerUnit) {
     this.constPerUnit = constPerUnit;
   }
-
 }

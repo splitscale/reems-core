@@ -32,7 +32,7 @@ public class CreateEnergyConsumptionInteractorTest {
   public void testCreateEnergyConsumption() throws IOException {
     EnergyConsumptionRequest request = new EnergyConsumptionRequest(
       "Building A",
-      "200", null, null, null, null, 0
+      "200", null, null, null, null, null, null, 0
     );
     String expectedUid = "234";
 
