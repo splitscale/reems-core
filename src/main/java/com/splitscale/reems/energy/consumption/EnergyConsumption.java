@@ -102,4 +102,8 @@ public class EnergyConsumption {
   public void setConstPerUnit(double constPerUnit) {
     this.constPerUnit = constPerUnit;
   }
+
+public double getCostPerUnit() {
+    return 0;
+}
 }
