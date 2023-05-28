@@ -1,19 +1,22 @@
 package com.splitscale.reems.tenantinfo;
 
-public class TenantInfo {
+import java.sql.Date;
 
+public class TenantInfo {
   private String id;
   private String tenantName;
-  private String propertyName;
+  private Date created;
+  private Date edited;
 
-  public TenantInfo() {
-    //default
-  }
-
-  public TenantInfo(String id, String tenantName, String propertyName) {
+  public TenantInfo(String id, String tenantName, Date created, Date edited) {
     this.id = id;
     this.tenantName = tenantName;
-    this.propertyName = propertyName;
+    this.created = created;
+    this.edited = edited;
+  }
+
+  public TenantInfo() {
+    // default
   }
 
   public String getId() {
@@ -32,11 +35,19 @@ public class TenantInfo {
     this.tenantName = tenantName;
   }
 
-  public String getPropertyName() {
-    return propertyName;
+  public Date getCreated() {
+    return created;
   }
 
-  public void setPropertyName(String propertyName) {
-    this.propertyName = propertyName;
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getEdited() {
+    return edited;
+  }
+
+  public void setEdited(Date edited) {
+    this.edited = edited;
   }
 }

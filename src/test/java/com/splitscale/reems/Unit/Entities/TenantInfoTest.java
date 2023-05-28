@@ -2,37 +2,53 @@ package com.splitscale.reems.Unit.Entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.sql.Date;
+
 import com.splitscale.reems.tenantinfo.TenantInfo;
+
 import org.junit.jupiter.api.Test;
 
 public class TenantInfoTest {
 
   @Test
   public void testGettersAndSetters() {
-    // Create a sample TenantInfo instance
+    // Create test data
     String id = "01";
-    String tenantName = "Jiv DelaCruz";
-    String propertyName = "Building A";
+    String tenantName = "Jiv Dela Cruz";
+    Date created = Date.valueOf("2023-01-01");
+    Date edited = Date.valueOf("2023-01-02");
 
-    TenantInfo tenantInfo = new TenantInfo(id, tenantName, propertyName);
+    // Create a TenantInfo object
+    TenantInfo tenantInfo = new TenantInfo();
 
-    // Test the getters
+    // Set the values using the setter methods
+    tenantInfo.setId(id);
+    tenantInfo.setTenantName(tenantName);
+    tenantInfo.setCreated(created);
+    tenantInfo.setEdited(edited);
+
+    // Check if the getter methods return the correct values
     assertEquals(id, tenantInfo.getId());
     assertEquals(tenantName, tenantInfo.getTenantName());
-    assertEquals(propertyName, tenantInfo.getPropertyName());
+    assertEquals(created, tenantInfo.getCreated());
+    assertEquals(edited, tenantInfo.getEdited());
+  }
 
-    // Test the setters
-    String newId = "02";
-    String newTenantName = "Jane Smith";
-    String newPropertyName = "New Property";
+  @Test
+  public void testConstructor() {
+    // Create test data
+    String id = "01";
+    String tenantName = "Jiv Dela Cruz";
+    Date created = Date.valueOf("2023-01-01");
+    Date edited = Date.valueOf("2023-01-02");
 
-    tenantInfo.setId(newId);
-    tenantInfo.setTenantName(newTenantName);
-    tenantInfo.setPropertyName(newPropertyName);
+    // Create a TenantInfo object using the constructor
+    TenantInfo tenantInfo = new TenantInfo(id, tenantName, created, edited);
 
-    // Test the updated values
-    assertEquals(newId, tenantInfo.getId());
-    assertEquals(newTenantName, tenantInfo.getTenantName());
-    assertEquals(newPropertyName, tenantInfo.getPropertyName());
+    // Check if the getter methods return the correct values
+    assertEquals(id, tenantInfo.getId());
+    assertEquals(tenantName, tenantInfo.getTenantName());
+    assertEquals(created, tenantInfo.getCreated());
+    assertEquals(edited, tenantInfo.getEdited());
   }
 }
