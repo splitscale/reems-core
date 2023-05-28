@@ -6,6 +6,9 @@ public class PropertyRequest {
   private String location;
   private String status;
 
+  public PropertyRequest() {
+    //default
+  }
   public PropertyRequest(String name, String location, String status) {
     this.name = name;
     this.location = location;

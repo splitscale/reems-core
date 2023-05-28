@@ -15,6 +15,10 @@ public class EnvironmentalHazard {
   private Date created;
   private Date modified;
 
+  public EnvironmentalHazard() {
+    //default
+  }
+
   public EnvironmentalHazard(
     String id,
     String propertyId,

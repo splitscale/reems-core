@@ -9,6 +9,10 @@ public class HistoryResponse {
   private String body;
   private Date created;
 
+  public HistoryResponse() {
+    //default
+  }
+
   public HistoryResponse(String id, String header, String body, Date created) {
     this.id = id;
     this.header = header;

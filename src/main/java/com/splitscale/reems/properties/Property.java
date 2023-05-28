@@ -7,6 +7,10 @@ public class Property {
   private String location;
   private String status;
 
+  public Property() {
+    //default
+  }
+
   public Property(String id, String name, String location, String status) {
     this.id = id;
     this.name = name;

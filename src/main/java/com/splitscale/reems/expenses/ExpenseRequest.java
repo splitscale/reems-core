@@ -4,6 +4,10 @@ public class ExpenseRequest {
 
   private String expense;
 
+  public ExpenseRequest() {
+    //default
+  }
+
   public ExpenseRequest(String expense) {
     this.expense = expense;
   }

@@ -15,6 +15,10 @@ public class EnvironmentalHazardResponse {
   private Date created;
   private Date modified;
 
+  public EnvironmentalHazardResponse() {
+    //default
+  }
+
   public EnvironmentalHazardResponse(
     String id,
     String propertyId,

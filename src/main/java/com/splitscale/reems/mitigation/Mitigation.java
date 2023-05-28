@@ -12,6 +12,10 @@ public class Mitigation {
   private Date created;
   private Date modified;
 
+  public Mitigation() {
+    //default
+  }
+
   public Mitigation(
     String id,
     String hazardId,

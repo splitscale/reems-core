@@ -5,6 +5,10 @@ public class TenantInfoRequest {
   private String tenantName;
   private String propertyName;
 
+  public TenantInfoRequest() {
+    //default
+  }
+
   public TenantInfoRequest(String tenantName, String propertyName) {
     this.tenantName = tenantName;
     this.propertyName = propertyName;

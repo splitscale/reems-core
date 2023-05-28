@@ -6,6 +6,10 @@ public class TenantInfoResponse {
   private String tenantName;
   private String propertyName;
 
+  public TenantInfoResponse() {
+    //default
+  }
+
   public TenantInfoResponse(String id, String tenantName, String propertyName) {
     this.id = id;
     this.tenantName = tenantName;

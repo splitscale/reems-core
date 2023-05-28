@@ -9,6 +9,10 @@ public class ExpenseResponse {
   private Date created;
   private Date modified;
 
+  public ExpenseResponse() {
+    //default
+  }
+
   public ExpenseResponse(
     String id,
     String expense,

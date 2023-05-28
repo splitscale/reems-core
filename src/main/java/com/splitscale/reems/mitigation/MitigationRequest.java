@@ -6,6 +6,10 @@ public class MitigationRequest {
   private String description;
   private String cost;
 
+  public MitigationRequest() {
+    //default
+  }
+
   public MitigationRequest(String task, String description, String cost) {
     this.task = task;
     this.description = description;

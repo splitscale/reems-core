@@ -13,6 +13,10 @@ public class EnergyConsumptionResponse {
   private Date created;
   private Date modified;
 
+  public EnergyConsumptionResponse() {
+    //default
+  }
+
   public EnergyConsumptionResponse(
     String id,
     String propertyId,

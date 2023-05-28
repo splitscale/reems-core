@@ -5,6 +5,10 @@ public class HistoryRequest {
   private String header;
   private String body;
 
+  public HistoryRequest() {
+    //default
+  }
+
   public HistoryRequest(String header, String body) {
     this.header = header;
     this.body = body;

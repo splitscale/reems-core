@@ -7,6 +7,10 @@ public class PropertyResponse {
   private String location;
   private String status;
 
+  public PropertyResponse() {
+    //default
+  }
+
   public PropertyResponse(
     String id,
     String name,

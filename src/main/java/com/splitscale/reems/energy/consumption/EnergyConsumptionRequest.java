@@ -5,6 +5,10 @@ public class EnergyConsumptionRequest {
   private String propertyName;
   private String usage;
 
+  public EnergyConsumptionRequest() {
+    // default
+  }
+
   public EnergyConsumptionRequest(String propertyName, String usage) {
     this.propertyName = propertyName;
     this.usage = usage;

@@ -6,6 +6,10 @@ public class TenantInfo {
   private String tenantName;
   private String propertyName;
 
+  public TenantInfo() {
+    //default
+  }
+
   public TenantInfo(String id, String tenantName, String propertyName) {
     this.id = id;
     this.tenantName = tenantName;

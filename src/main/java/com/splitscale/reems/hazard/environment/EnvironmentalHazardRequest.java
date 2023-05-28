@@ -9,6 +9,10 @@ public class EnvironmentalHazardRequest {
   private String riskLevel;
   private String mitigationStatus;
 
+  public EnvironmentalHazardRequest() {
+    //default
+  }
+
   public EnvironmentalHazardRequest(
     String title,
     String category,

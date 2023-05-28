@@ -9,6 +9,10 @@ public class Expense {
   private Date created;
   private Date modified;
 
+  public Expense() {
+    //default
+  }
+
   public Expense(String id, String expense, Date created, Date modified) {
     this.id = id;
     this.expense = expense;

@@ -9,6 +9,10 @@ public class History {
   private String body;
   private Date created;
 
+  public History() {
+    //default
+  }
+
   public History(String id, String header, String body, Date created) {
     this.id = id;
     this.header = header;
