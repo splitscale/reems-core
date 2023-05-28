@@ -5,36 +5,30 @@ import java.util.Date;
 public class EnergyConsumptionResponse {
 
   private String id;
+  private String expenseId;
   private String propertyId;
-  private String propertyName;
-  private String usage;
-  private String consumed;
-  private String amount;
   private Date created;
-  private Date modified;
+  private Date edited;
+  private String consumedValue;
+  private String energyUnit;
+  private String usageValue;
+  private double costPerUnit;
 
-  public EnergyConsumptionResponse() {
-    //default
+  public EnergyConsumptionResponse(String id, String expenseId, String propertyId, Date created, Date edited,
+      String consumedValue, String energyUnit, String usageValue, double constPerUnit) {
+    this.id = id;
+    this.expenseId = expenseId;
+    this.propertyId = propertyId;
+    this.created = created;
+    this.edited = edited;
+    this.consumedValue = consumedValue;
+    this.energyUnit = energyUnit;
+    this.usageValue = usageValue;
+    this.costPerUnit = constPerUnit;
   }
 
-  public EnergyConsumptionResponse(
-    String id,
-    String propertyId,
-    String propertyName,
-    String usage,
-    String consumed,
-    String amount,
-    Date created,
-    Date modified
-  ) {
-    this.id = id;
-    this.propertyId = propertyId;
-    this.propertyName = propertyName;
-    this.usage = usage;
-    this.consumed = consumed;
-    this.amount = amount;
-    this.created = created;
-    this.modified = modified;
+  public EnergyConsumptionResponse() {
+    // default
   }
 
   public String getId() {
@@ -45,44 +39,20 @@ public class EnergyConsumptionResponse {
     this.id = id;
   }
 
+  public String getExpenseId() {
+    return expenseId;
+  }
+
+  public void setExpenseId(String expenseId) {
+    this.expenseId = expenseId;
+  }
+
   public String getPropertyId() {
     return propertyId;
   }
 
   public void setPropertyId(String propertyId) {
     this.propertyId = propertyId;
-  }
-
-  public String getPropertyName() {
-    return propertyName;
-  }
-
-  public void setPropertyName(String propertyName) {
-    this.propertyName = propertyName;
-  }
-
-  public String getUsage() {
-    return usage;
-  }
-
-  public void setUsage(String usage) {
-    this.usage = usage;
-  }
-
-  public String getConsumed() {
-    return consumed;
-  }
-
-  public void setConsumed(String consumed) {
-    this.consumed = consumed;
-  }
-
-  public String getAmount() {
-    return amount;
-  }
-
-  public void setAmount(String amount) {
-    this.amount = amount;
   }
 
   public Date getCreated() {
@@ -93,11 +63,52 @@ public class EnergyConsumptionResponse {
     this.created = created;
   }
 
-  public Date getModified() {
-    return modified;
+  public Date getEdited() {
+    return edited;
   }
 
-  public void setModified(Date modified) {
-    this.modified = modified;
+  public void setEdited(Date edited) {
+    this.edited = edited;
   }
+
+  public String getConsumedValue() {
+    return consumedValue;
+  }
+
+  public void setConsumedValue(String consumedValue) {
+    this.consumedValue = consumedValue;
+  }
+
+  public String getEnergyUnit() {
+    return energyUnit;
+  }
+
+  public void setEnergyUnit(String energyUnit) {
+    this.energyUnit = energyUnit;
+  }
+
+  public String getUsageValue() {
+    return usageValue;
+  }
+
+  public void setUsageValue(String usageValue) {
+    this.usageValue = usageValue;
+  }
+
+  public double getConstPerUnit() {
+    return costPerUnit;
+  }
+
+  public void setConstPerUnit(double constPerUnit) {
+    this.costPerUnit = constPerUnit;
+  }
+
+  public double getCostPerUnit() {
+    return costPerUnit;
+  }
+
+  public void setCostPerUnit(double costPerUnit) {
+    this.costPerUnit = costPerUnit;
+  }
+
 }

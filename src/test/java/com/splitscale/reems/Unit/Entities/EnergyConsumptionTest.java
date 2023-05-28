@@ -2,71 +2,83 @@ package com.splitscale.reems.Unit.Entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.sql.Date;
+
 import com.splitscale.reems.energy.consumption.EnergyConsumption;
-import java.util.Date;
 import org.junit.jupiter.api.Test;
 
 public class EnergyConsumptionTest {
 
   @Test
-  public void testGettersAndSetters() {
-    String id = "01";
-    String propertyId = "4345";
-    String propertyName = "Property A";
-    String usage = "Electricity";
-    String consumed = "100 kwh";
-    String amount = "$50";
-    Date created = new Date();
-    Date modified = new Date();
+  public void testConstructorAndGetters() {
+    // Create sample values
+    String id = "123";
+    String expenseId = "456";
+    String propertyId = "789";
+    Date created = new Date(0);
+    Date edited = new Date(0);
+    String consumedValue = "100";
+    String energyUnit = "kWh";
+    String usageValue = "50";
+    double costPerUnit = 0.5;
 
-    EnergyConsumption energyConsumption = new EnergyConsumption(
-      id,
-      propertyId,
-      propertyName,
-      usage,
-      consumed,
-      amount,
-      created,
-      modified
-    );
+    // Create an instance of EnergyConsumption using the constructor
+    EnergyConsumption energyConsumption = new EnergyConsumption(id, expenseId, propertyId, created, edited,
+        consumedValue, energyUnit, usageValue, costPerUnit);
 
     // Test the getters
     assertEquals(id, energyConsumption.getId());
+    assertEquals(expenseId, energyConsumption.getExpenseId());
     assertEquals(propertyId, energyConsumption.getPropertyId());
-    assertEquals(propertyName, energyConsumption.getPropertyName());
-    assertEquals(usage, energyConsumption.getUsage());
-    assertEquals(consumed, energyConsumption.getConsumed());
-    assertEquals(amount, energyConsumption.getAmount());
     assertEquals(created, energyConsumption.getCreated());
-    assertEquals(modified, energyConsumption.getModified());
+    assertEquals(edited, energyConsumption.getEdited());
+    assertEquals(consumedValue, energyConsumption.getConsumedValue());
+    assertEquals(energyUnit, energyConsumption.getEnergyUnit());
+    assertEquals(usageValue, energyConsumption.getUsageValue());
+    assertEquals(costPerUnit, energyConsumption.getConstPerUnit(), 0.0); // delta of 0.0 for exact comparison
+  }
 
-    // Test the setters
-    String newId = "2";
-    String newPropertyId = "9812";
-    String newPropertyName = "New Property";
-    String newUsage = "Gas";
-    String newConsumed = "200kwh";
-    String newAmount = "$30";
-    Date newCreated = new Date();
-    Date newModified = new Date();
+  @Test
+  public void testSetters() {
+    // Create a sample EnergyConsumption object
+    EnergyConsumption energyConsumption = new EnergyConsumption("", "", "", null, null,
+        "", "", "", 0.0);
 
+    // Set new values using the setters
+    String newId = "123";
     energyConsumption.setId(newId);
-    energyConsumption.setPropertyId(newPropertyId);
-    energyConsumption.setPropertyName(newPropertyName);
-    energyConsumption.setUsage(newUsage);
-    energyConsumption.setConsumed(newConsumed);
-    energyConsumption.setAmount(newAmount);
-    energyConsumption.setCreated(newCreated);
-    energyConsumption.setModified(newModified);
-
-    // Test the updated values
     assertEquals(newId, energyConsumption.getId());
+
+    String newExpenseId = "456";
+    energyConsumption.setExpenseId(newExpenseId);
+    assertEquals(newExpenseId, energyConsumption.getExpenseId());
+
+    String newPropertyId = "789";
+    energyConsumption.setPropertyId(newPropertyId);
     assertEquals(newPropertyId, energyConsumption.getPropertyId());
-    assertEquals(newPropertyName, energyConsumption.getPropertyName());
-    assertEquals(newUsage, energyConsumption.getUsage());
-    assertEquals(newConsumed, energyConsumption.getConsumed());
-    assertEquals(newAmount, energyConsumption.getAmount());
+
+    Date newCreated = new Date(0);
+    energyConsumption.setCreated(newCreated);
     assertEquals(newCreated, energyConsumption.getCreated());
-    assertEquals(newModified, energyConsumption.getModified());
+
+    Date newEdited = new Date(0);
+    energyConsumption.setEdited(newEdited);
+    assertEquals(newEdited, energyConsumption.getEdited());
+
+    String newConsumedValue = "100";
+    energyConsumption.setConsumedValue(newConsumedValue);
+    assertEquals(newConsumedValue, energyConsumption.getConsumedValue());
+
+    String newEnergyUnit = "kWh";
+    energyConsumption.setEnergyUnit(newEnergyUnit);
+    assertEquals(newEnergyUnit, energyConsumption.getEnergyUnit());
+
+    String newUsageValue = "50";
+    energyConsumption.setUsageValue(newUsageValue);
+    assertEquals(newUsageValue, energyConsumption.getUsageValue());
+
+    double newConstPerUnit = 0.5;
+    energyConsumption.setConstPerUnit(newConstPerUnit);
+    assertEquals(newConstPerUnit, energyConsumption.getConstPerUnit(), 0.0); // delta of 0.0 for exact comparison
   }
 }

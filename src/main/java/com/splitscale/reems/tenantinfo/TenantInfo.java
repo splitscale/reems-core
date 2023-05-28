@@ -2,17 +2,21 @@ package com.splitscale.reems.tenantinfo;
 
 import java.sql.Date;
 
-public class TenantInfoRequest {
+public class TenantInfo {
   private String id;
   private String tenantName;
   private Date created;
   private Date edited;
 
-  public TenantInfoRequest(String id, String tenantName, Date created, Date edited) {
+  public TenantInfo(String id, String tenantName, Date created, Date edited) {
     this.id = id;
     this.tenantName = tenantName;
     this.created = created;
     this.edited = edited;
+  }
+
+  public TenantInfo() {
+    // default
   }
 
   public String getId() {
@@ -46,5 +50,4 @@ public class TenantInfoRequest {
   public void setEdited(Date edited) {
     this.edited = edited;
   }
-
 }
