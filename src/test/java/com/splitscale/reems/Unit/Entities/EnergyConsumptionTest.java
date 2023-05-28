@@ -78,7 +78,7 @@ public class EnergyConsumptionTest {
     assertEquals(newUsageValue, energyConsumption.getUsageValue());
 
     double newConstPerUnit = 0.5;
-    energyConsumption.setConstPerUnit(newConstPerUnit);
-    assertEquals(newConstPerUnit, energyConsumption.getConstPerUnit(), 0.0); // delta of 0.0 for exact comparison
+    energyConsumption.setCostPerUnit(newConstPerUnit);
+    assertEquals(newConstPerUnit, energyConsumption.getCostPerUnit(), 0.0); // delta of 0.0 for exact comparison
   }
 }

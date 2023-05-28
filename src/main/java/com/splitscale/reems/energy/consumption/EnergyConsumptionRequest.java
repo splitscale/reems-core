@@ -14,6 +14,10 @@ public class EnergyConsumptionRequest {
   private String usageValue;
   private double costPerUnit;
 
+  public EnergyConsumptionRequest() {
+    // default
+  }
+
   public EnergyConsumptionRequest(String id, String expenseId, String propertyId, Date created, Date edited,
       String consumedValue, String energyUnit, String usageValue, double costPerUnit) {
     this.id = id;
