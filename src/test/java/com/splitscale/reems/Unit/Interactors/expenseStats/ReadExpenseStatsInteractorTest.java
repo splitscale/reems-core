@@ -1,12 +1,10 @@
 package com.splitscale.reems.Unit.Interactors.expenseStats;
 
+import com.splitscale.reems.expenseStats.ExpenseStats;
 import com.splitscale.reems.expenseStats.read.ReadExpenseStatsInteractor;
-import com.splitscale.reems.hazard.environment.EnvironmentalHazard;
-import com.splitscale.reems.repositories.EnvironmentalHazardRepository;
+import com.splitscale.reems.repositories.ExpenseStatsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,50 +13,47 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class ReadExpenseStatsInteractorTest {
-
-    @Mock
-    private EnvironmentalHazardRepository mockRepository;
+class ReadExpenseStatsInteractorTest {
 
     private ReadExpenseStatsInteractor interactor;
+    private ExpenseStatsRepository repository;
 
     @BeforeEach
-    public void setUp() {
-        MockitoAnnotations.openMocks(this);
-        interactor = new ReadExpenseStatsInteractor(mockRepository);
+    void setUp() {
+        repository = mock(ExpenseStatsRepository.class);
+        interactor = new ReadExpenseStatsInteractor(repository);
     }
 
     @Test
-    public void testGetAllEnvironmentalHazard() throws IOException {
+    void testGetAllExpenseStats() throws IOException {
         // Arrange
-        List<EnvironmentalHazard> expectedHazards = new ArrayList<>();
-        expectedHazards.add(new EnvironmentalHazard("1", "Hazard 1", null, null, null, null, null, null));
-        expectedHazards.add(new EnvironmentalHazard("2", "Hazard 2", null, null, null, null, null, null));
+        List<ExpenseStats> expectedStats = new ArrayList<>();
+        expectedStats.add(new ExpenseStats("1", null, null, "Expense 1", null, null));
+        expectedStats.add(new ExpenseStats("2", null, null, "Expense 2", null, null));
 
-        when(mockRepository.getAll()).thenReturn(expectedHazards);
+        when(repository.getAll()).thenReturn(expectedStats);
 
         // Act
-        List<EnvironmentalHazard> actualHazards = interactor.getAllEnvironmentalHazard();
+        List<ExpenseStats> actualStats = interactor.getAllExpenseStats();
 
         // Assert
-        assertEquals(expectedHazards, actualHazards);
-        verify(mockRepository, times(1)).getAll();
+        assertEquals(expectedStats, actualStats);
+        verify(repository, times(1)).getAll();
     }
 
     @Test
-    public void testGetEnvironmentalHazardById() throws IOException {
+    void testGetAllExpenseStatsById() throws IOException {
         // Arrange
-        String hazardId = "1";
-        EnvironmentalHazard expectedHazard = new EnvironmentalHazard(hazardId, "Hazard 1", null, null, hazardId,
-                hazardId, hazardId, hazardId);
+        String expectedId = "1";
+        ExpenseStats expectedStats = new ExpenseStats(expectedId, null, null, "Expense 1", expectedId, expectedId);
 
-        when(mockRepository.getById(hazardId)).thenReturn(expectedHazard);
+        when(repository.getById(expectedId)).thenReturn(expectedStats);
 
         // Act
-        EnvironmentalHazard actualHazard = interactor.getEnvironmentalHazardById(hazardId);
+        ExpenseStats actualStats = interactor.getAllExpenseStatsbyId(expectedId);
 
         // Assert
-        assertEquals(expectedHazard, actualHazard);
-        verify(mockRepository, times(1)).getById(hazardId);
+        assertEquals(expectedStats, actualStats);
+        verify(repository, times(1)).getById(expectedId);
     }
 }

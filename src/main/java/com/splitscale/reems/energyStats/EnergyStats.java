@@ -1,27 +1,27 @@
-package com.splitscale.reems.expenseStats;
+package com.splitscale.reems.energyStats;
 
 import java.sql.Date;
 
-public class expenseResponseStats {
+public class EnergyStats {
     private String id;
     private Date created;
     private Date edited;
-    private String totalExpenses;
+    private String totalConsumption;
     private String changeThisMonth;
-    private String expenseThisMonth;
+    private String consumedThisMonth;
 
-    public expenseResponseStats() {
+    public EnergyStats() {
         // default
     }
 
-    public expenseResponseStats(String id, Date created, Date edited, String totalExpenses, String changeThisMonth,
-            String expenseThisMonth) {
+    public EnergyStats(String id, Date created, Date edited, String totalConsumption, String changeThisMonth,
+            String consumedThisMonth) {
         this.id = id;
         this.created = created;
         this.edited = edited;
-        this.totalExpenses = totalExpenses;
+        this.totalConsumption = totalConsumption;
         this.changeThisMonth = changeThisMonth;
-        this.expenseThisMonth = expenseThisMonth;
+        this.consumedThisMonth = consumedThisMonth;
     }
 
     public String getId() {
@@ -48,12 +48,12 @@ public class expenseResponseStats {
         this.edited = edited;
     }
 
-    public String getTotalExpenses() {
-        return totalExpenses;
+    public String getTotalConsumption() {
+        return totalConsumption;
     }
 
-    public void setTotalExpenses(String totalExpenses) {
-        this.totalExpenses = totalExpenses;
+    public void setTotalConsumption(String totalConsumption) {
+        this.totalConsumption = totalConsumption;
     }
 
     public String getChangeThisMonth() {
@@ -64,11 +64,11 @@ public class expenseResponseStats {
         this.changeThisMonth = changeThisMonth;
     }
 
-    public String getExpenseThisMonth() {
-        return expenseThisMonth;
+    public String getConsumedThisMonth() {
+        return consumedThisMonth;
     }
 
-    public void setExpenseThisMonth(String expenseThisMonth) {
-        this.expenseThisMonth = expenseThisMonth;
+    public void setConsumedThisMonth(String consumedThisMonth) {
+        this.consumedThisMonth = consumedThisMonth;
     }
 }
