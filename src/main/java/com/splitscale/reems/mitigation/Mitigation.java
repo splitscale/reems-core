@@ -10,7 +10,7 @@ public class Mitigation {
   private Date edited;
   private String title;
   private String description;
-  private String cost;
+  private Double cost;
   private String status;
 
   public Mitigation() {
@@ -18,7 +18,7 @@ public class Mitigation {
   }
 
   public Mitigation(String id, String expenseId, Date created, Date edited, String title, String description,
-      String cost, String status) {
+      Double cost, String status) {
     this.id = id;
     this.expenseId = expenseId;
     this.created = created;
@@ -77,11 +77,11 @@ public class Mitigation {
     this.description = description;
   }
 
-  public String getCost() {
+  public Double getCost() {
     return cost;
   }
 
-  public void setCost(String cost) {
+  public void setCost(Double cost) {
     this.cost = cost;
   }
 

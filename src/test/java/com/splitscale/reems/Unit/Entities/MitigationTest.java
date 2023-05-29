@@ -21,7 +21,7 @@ class MitigationTest {
     Date edited = new Date();
     String title = "Sample Title";
     String description = "Sample Description";
-    String cost = "1000";
+    Double cost = null;
     String status = "Active";
 
     mitigation.setId(id);
