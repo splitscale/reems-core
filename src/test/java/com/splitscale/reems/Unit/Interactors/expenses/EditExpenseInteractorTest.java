@@ -27,9 +27,8 @@ class EditExpenseInteractorTest {
 
   @Test
   void editExpense_shouldCallUpdateMethod() throws IOException {
-    Expense expense = new Expense(null, null, null, null);
+    Expense expense = new Expense(null, null, null, null, null);
     expense.setId("213");
-    expense.setDescription("New expense");
 
     interactor.editExpense(expense);
 

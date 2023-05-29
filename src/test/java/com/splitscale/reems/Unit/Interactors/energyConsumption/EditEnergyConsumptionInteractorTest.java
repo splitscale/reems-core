@@ -30,15 +30,14 @@ public class EditEnergyConsumptionInteractorTest {
   @DisplayName("Test Edit EnergyConsumption Interactor")
   public void testEditEnergyConsumption() throws IOException {
     EnergyConsumption energyConsumption = new EnergyConsumption(
-      "123",
-      "246",
-      "REEMS",
-      "204",
-      "100kwh",
-      "500",
-      null,
-      null
-    );
+        "123",
+        "246",
+        "REEMS",
+        "204",
+        "100kwh",
+        "500",
+        null,
+        null);
 
     interactor.editEnergyConsumption(energyConsumption);
 

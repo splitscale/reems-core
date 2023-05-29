@@ -26,7 +26,7 @@ class EditTenantInfoInteractorTest {
 
   @Test
   void editTenantInfo_shouldCallRepositoryUpdateMethod() throws IOException {
-    TenantInfo tenantInfo = new TenantInfo(null, null, null);
+    TenantInfo tenantInfo = new TenantInfo(null, null, null, null);
 
     interactor.editTenantInfo(tenantInfo);
 
