@@ -1,18 +1,19 @@
 package com.splitscale.reems.expenseStats.edit;
 
-import com.splitscale.reems.expenses.Expense;
-import com.splitscale.reems.repositories.ExpenseRepository;
+import com.splitscale.reems.expenseStats.ExpenseStats;
+import com.splitscale.reems.repositories.ExpenseStatsRepository;
+
 import java.io.IOException;
 
 public class EditExpenseStatsInteractor {
 
-    private ExpenseRepository repository;
+    private ExpenseStatsRepository repository;
 
-    public EditExpenseStatsInteractor(ExpenseRepository repository) {
+    public EditExpenseStatsInteractor(ExpenseStatsRepository repository) {
         this.repository = repository;
     }
 
-    public void editExpense(Expense expense) throws IOException {
-        repository.update(expense);
+    public void editExpense(ExpenseStats expenseStats) throws IOException {
+        repository.update(expenseStats);
     }
 }

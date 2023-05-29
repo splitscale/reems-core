@@ -1,20 +1,20 @@
 package com.splitscale.reems.hazardStats.edit;
 
-import com.splitscale.reems.hazard.environment.EnvironmentalHazard;
-import com.splitscale.reems.repositories.EnvironmentalHazardRepository;
+import com.splitscale.reems.hazardStats.HazardStats;
+import com.splitscale.reems.repositories.HazardStatsRepository;
+
 import java.io.IOException;
 
 public class EditHazardStatsInteractor {
 
-    private EnvironmentalHazardRepository repository;
+    private HazardStatsRepository repository;
 
-    public EditHazardStatsInteractor(
-            EnvironmentalHazardRepository repository) {
+    public EditHazardStatsInteractor(HazardStatsRepository repository) {
         this.repository = repository;
     }
 
-    public void editEnvironmentalHazard(EnvironmentalHazard environmentalHazard)
+    public void EditHazardStats(HazardStats hazardStats)
             throws IOException {
-        repository.update(environmentalHazard);
+        repository.update(hazardStats);
     }
 }
