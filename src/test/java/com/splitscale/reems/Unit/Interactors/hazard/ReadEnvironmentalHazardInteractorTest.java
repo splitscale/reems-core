@@ -33,30 +33,10 @@ class ReadEnvironmentalHazardInteractorTest {
     List<EnvironmentalHazard> expectedHazards = new ArrayList<>();
     expectedHazards.add(
       new EnvironmentalHazard(
-        "123",
-        "Hazard 1",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
       )
     );
     expectedHazards.add(
       new EnvironmentalHazard(
-        "124",
-        "Hazard 124",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
       )
     );
 
@@ -70,16 +50,6 @@ class ReadEnvironmentalHazardInteractorTest {
   @Test
   void getEnvironmentalHazardById_shouldReturnHazardById() throws IOException {
     EnvironmentalHazard expectedHazard = new EnvironmentalHazard(
-      "123",
-      "Hazard 123",
-      "Hazard",
-      "Chemical",
-      "Sample Hazard Description",
-      "Property A",
-      "High",
-      "InProgress",
-      null,
-      null
     );
     String hazardId = "hazard-1";
 

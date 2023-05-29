@@ -14,6 +14,10 @@ public class EnergyConsumptionResponse {
   private String usageValue;
   private double costPerUnit;
 
+  public EnergyConsumptionResponse() {
+    // default
+  }
+
   public EnergyConsumptionResponse(String id, String expenseId, String propertyId, Date created, Date edited,
       String consumedValue, String energyUnit, String usageValue, double constPerUnit) {
     this.id = id;
@@ -25,10 +29,6 @@ public class EnergyConsumptionResponse {
     this.energyUnit = energyUnit;
     this.usageValue = usageValue;
     this.costPerUnit = constPerUnit;
-  }
-
-  public EnergyConsumptionResponse() {
-    // default
   }
 
   public String getId() {

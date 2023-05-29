@@ -15,6 +15,10 @@ public class TenantInfoRequest {
     this.edited = edited;
   }
 
+  public TenantInfoRequest() {
+    // default
+  }
+
   public String getId() {
     return id;
   }

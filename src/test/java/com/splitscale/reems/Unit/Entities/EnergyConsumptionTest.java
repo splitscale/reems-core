@@ -20,7 +20,7 @@ public class EnergyConsumptionTest {
     String consumedValue = "100";
     String energyUnit = "kWh";
     String usageValue = "50";
-    double costPerUnit = 0.5;
+    double costPerUnit = 0.0;
 
     // Create an instance of EnergyConsumption using the constructor
     EnergyConsumption energyConsumption = new EnergyConsumption(id, expenseId, propertyId, created, edited,
@@ -35,7 +35,7 @@ public class EnergyConsumptionTest {
     assertEquals(consumedValue, energyConsumption.getConsumedValue());
     assertEquals(energyUnit, energyConsumption.getEnergyUnit());
     assertEquals(usageValue, energyConsumption.getUsageValue());
-    assertEquals(costPerUnit, energyConsumption.getConstPerUnit(), 0.0); // delta of 0.0 for exact comparison
+    assertEquals(costPerUnit, energyConsumption.getCostPerUnit()); 
   }
 
   @Test
@@ -78,7 +78,7 @@ public class EnergyConsumptionTest {
     assertEquals(newUsageValue, energyConsumption.getUsageValue());
 
     double newConstPerUnit = 0.5;
-    energyConsumption.setConstPerUnit(newConstPerUnit);
-    assertEquals(newConstPerUnit, energyConsumption.getConstPerUnit(), 0.0); // delta of 0.0 for exact comparison
+    energyConsumption.setCostPerUnit(newConstPerUnit);
+    assertEquals(newConstPerUnit, energyConsumption.getCostPerUnit(), 0.0); // delta of 0.0 for exact comparison
   }
 }

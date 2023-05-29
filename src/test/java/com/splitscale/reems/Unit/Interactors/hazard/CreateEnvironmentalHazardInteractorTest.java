@@ -31,7 +31,7 @@ class CreateEnvironmentalHazardInteractorTest {
     EnvironmentalHazardRequest hazardRequest = new EnvironmentalHazardRequest(
       "Hazard 1",
       "Chemical",
-      "Description of a hazard",
+      null, null, "Description of a hazard",
       "Property A",
       "High",
       "InProgress"
