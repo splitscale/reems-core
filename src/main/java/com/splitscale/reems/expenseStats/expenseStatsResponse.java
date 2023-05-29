@@ -2,7 +2,7 @@ package com.splitscale.reems.expenseStats;
 
 import java.sql.Date;
 
-public class expenseResponseStats {
+public class expenseStatsResponse {
     private String id;
     private Date created;
     private Date edited;
@@ -10,11 +10,11 @@ public class expenseResponseStats {
     private String changeThisMonth;
     private String expenseThisMonth;
 
-    public expenseResponseStats() {
+    public expenseStatsResponse() {
         // default
     }
 
-    public expenseResponseStats(String id, Date created, Date edited, String totalExpenses, String changeThisMonth,
+    public expenseStatsResponse(String id, Date created, Date edited, String totalExpenses, String changeThisMonth,
             String expenseThisMonth) {
         this.id = id;
         this.created = created;
