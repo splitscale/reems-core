@@ -12,8 +12,8 @@ public class CreateEnergyStatsInteractor {
         this.repository = repository;
     }
 
-    public String createExpense(EnergyStatsRequest energyStatsRquest)
+    public String createEnergyStats(EnergyStatsRequest energyStatsRequest)
             throws IOException {
-        return repository.add(energyStatsRquest);
+        return repository.add(energyStatsRequest);
     }
 }

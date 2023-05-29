@@ -1,24 +1,20 @@
 package com.splitscale.reems.core.hazardStats.read;
 
-import com.splitscale.reems.core.hazard.environment.EnvironmentalHazard;
-import com.splitscale.reems.core.repositories.EnvironmentalHazardRepository;
+import com.splitscale.reems.core.hazardStats.HazardStats;
+import com.splitscale.reems.core.repositories.HazardStatsRepository;
+
 import java.io.IOException;
 import java.util.List;
 
 public class ReadHazardStatsInteractor {
 
-    EnvironmentalHazardRepository repository;
+  HazardStatsRepository repository;
 
-    public ReadHazardStatsInteractor(
-            EnvironmentalHazardRepository repository) {
-        this.repository = repository;
-    }
+  public List<HazardStats> getAllHazardStats() throws IOException {
+    return repository.getAll();
+  }
 
-    public List<EnvironmentalHazard> getAllEnvironmentalHazard() throws IOException {
-        return repository.getAll();
-    }
-
-    public EnvironmentalHazard getEnvironmentalHazardById(String id) throws IOException {
-        return repository.getById(id);
-    }
+  public HazardStats getHazardStatsById(String id) throws IOException {
+    return repository.getById(id);
+  }
 }

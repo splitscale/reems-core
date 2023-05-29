@@ -1,20 +1,19 @@
 package com.splitscale.reems.core.hazardStats.create;
 
-import com.splitscale.reems.core.hazard.environment.EnvironmentalHazardRequest;
-import com.splitscale.reems.core.repositories.EnvironmentalHazardRepository;
 import java.io.IOException;
 
+import com.splitscale.reems.core.hazardStats.HazardStatsRequest;
+import com.splitscale.reems.core.repositories.HazardStatsRepository;
+
 public class CreateHazardStatsInteractor {
+  private HazardStatsRepository repository;
 
-    private EnvironmentalHazardRepository repository;
+  public CreateHazardStatsInteractor(HazardStatsRepository repository) {
+    this.repository = repository;
+  }
 
-    public CreateHazardStatsInteractor(
-            EnvironmentalHazardRepository repository) {
-        this.repository = repository;
-    }
-
-    public String createEnvironmentalHazard(
-            EnvironmentalHazardRequest environmentalHazardRequest) throws IOException {
-        return repository.add(environmentalHazardRequest);
-    }
+  public String createHazardStats(
+      HazardStatsRequest hazardStatsRequest) throws IOException {
+    return repository.add(hazardStatsRequest);
+  }
 }

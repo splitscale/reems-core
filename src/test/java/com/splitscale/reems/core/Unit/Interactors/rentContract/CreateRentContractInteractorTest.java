@@ -36,7 +36,7 @@ class CreateRentContractInteractorTest {
         when(repository.add(request)).thenReturn(expectedResult);
 
         // Act
-        String result = interactor.createProperty(request);
+        String result = interactor.createRentContract(request);
 
         // Assert
         Assertions.assertEquals(expectedResult, result);

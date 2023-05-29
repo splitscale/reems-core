@@ -12,7 +12,7 @@ public class CreateRentContractInteractor {
         this.repository = repository;
     }
 
-    public String createProperty(RentContractRequest rentContractRequest)
+    public String createRentContract(RentContractRequest rentContractRequest)
             throws IOException {
         return repository.add(rentContractRequest);
     }

@@ -1,23 +1,24 @@
 package com.splitscale.reems.core.rentContract.read;
 
-import com.splitscale.reems.core.properties.Property;
-import com.splitscale.reems.core.repositories.PropertyRepository;
 import java.io.IOException;
 import java.util.List;
 
+import com.splitscale.reems.core.rentContract.RentContract;
+import com.splitscale.reems.core.repositories.RentContractRepository;
+
 public class ReadRentContractInteractor {
 
-    PropertyRepository repository;
+  RentContractRepository repository;
 
-    public ReadRentContractInteractor(PropertyRepository repository) {
-        this.repository = repository;
-    }
+  public ReadRentContractInteractor(RentContractRepository repository) {
+    this.repository = repository;
+  }
 
-    public List<Property> getAllProperty() throws IOException {
-        return repository.getAll();
-    }
+  public List<RentContract> getAllRentContract() throws IOException {
+    return repository.getAll();
+  }
 
-    public Property getById(String id) throws IOException {
-        return repository.getById(id);
-    }
+  public RentContract getById(String id) throws IOException {
+    return repository.getById(id);
+  }
 }

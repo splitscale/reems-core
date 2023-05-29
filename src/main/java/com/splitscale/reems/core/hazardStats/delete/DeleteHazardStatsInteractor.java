@@ -1,18 +1,18 @@
 package com.splitscale.reems.core.hazardStats.delete;
 
-import com.splitscale.reems.core.repositories.EnvironmentalHazardRepository;
+import com.splitscale.reems.core.repositories.HazardStatsRepository;
+
 import java.io.IOException;
 
 public class DeleteHazardStatsInteractor {
 
-    private EnvironmentalHazardRepository repository;
+  private HazardStatsRepository repository;
 
-    public DeleteHazardStatsInteractor(
-            EnvironmentalHazardRepository repository) {
-        this.repository = repository;
-    }
+  public DeleteHazardStatsInteractor(HazardStatsRepository repository) {
+    this.repository = repository;
+  }
 
-    public void deleteEnvironmentalHazard(String id) throws IOException {
-        repository.delete(id);
-    }
+  public void deleteHazardStats(String id) throws IOException {
+    repository.deleteById(id);
+  }
 }

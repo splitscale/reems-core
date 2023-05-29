@@ -1,18 +1,19 @@
 package com.splitscale.reems.core.rentContract.edit;
 
-import com.splitscale.reems.core.properties.Property;
-import com.splitscale.reems.core.repositories.PropertyRepository;
 import java.io.IOException;
+
+import com.splitscale.reems.core.rentContract.RentContract;
+import com.splitscale.reems.core.repositories.RentContractRepository;
 
 public class EditRentContractInteractor {
 
-    private PropertyRepository repository;
+  private RentContractRepository repository;
 
-    public EditRentContractInteractor(PropertyRepository repository) {
-        this.repository = repository;
-    }
+  public EditRentContractInteractor(RentContractRepository repository) {
+    this.repository = repository;
+  }
 
-    public void editProperty(Property property) throws IOException {
-        repository.update(property);
-    }
+  public void editRentContract(RentContract rentContract) throws IOException {
+    repository.update(rentContract);
+  }
 }

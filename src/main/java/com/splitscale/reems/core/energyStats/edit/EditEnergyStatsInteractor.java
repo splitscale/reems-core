@@ -13,7 +13,7 @@ public class EditEnergyStatsInteractor {
         this.repository = repository;
     }
 
-    public void editEnvironmentalHazard(EnergyStats energyStats)
+    public void editEnergyStats(EnergyStats energyStats)
             throws IOException {
         repository.update(energyStats);
     }

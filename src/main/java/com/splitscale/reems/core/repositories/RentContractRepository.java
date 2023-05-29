@@ -13,7 +13,7 @@ public interface RentContractRepository {
 
     public String add(RentContractRequest rentContractRequest) throws IOException;
 
-    public void update(RentContractRequest rentContractRequest) throws IOException;
+    public void update(RentContract rentContract) throws IOException;
 
     public void delete(String id) throws IOException;
 }
