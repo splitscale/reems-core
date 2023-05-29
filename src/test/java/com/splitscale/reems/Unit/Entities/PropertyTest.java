@@ -15,7 +15,7 @@ public class PropertyTest {
     String location = "St. San Miguel";
     String status = "Active";
 
-    Property property = new Property(id, name, location, status);
+    Property property = new Property(id, null, null, name, location, status);
 
     // Test the getters
     assertEquals(id, property.getId());

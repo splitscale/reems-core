@@ -1,26 +1,27 @@
 package com.splitscale.reems.properties;
 
+import java.sql.Date;
+
 public class PropertyResponse {
 
   private String id;
+  private Date created;
+  private Date modified;
   private String name;
   private String location;
   private String status;
 
-  public PropertyResponse() {
-    //default
-  }
-
-  public PropertyResponse(
-    String id,
-    String name,
-    String location,
-    String status
-  ) {
+  public PropertyResponse(String id, Date created, Date modified, String name, String location, String status) {
     this.id = id;
+    this.created = created;
+    this.modified = modified;
     this.name = name;
     this.location = location;
     this.status = status;
+  }
+
+  public PropertyResponse() {
+    // default
   }
 
   public String getId() {
@@ -29,6 +30,22 @@ public class PropertyResponse {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getModified() {
+    return modified;
+  }
+
+  public void setModified(Date modified) {
+    this.modified = modified;
   }
 
   public String getName() {
@@ -54,4 +71,5 @@ public class PropertyResponse {
   public void setStatus(String status) {
     this.status = status;
   }
+
 }
