@@ -45,7 +45,7 @@ public class ReadEnergyStatsInteractorTest {
         when(repository.getById(id)).thenReturn(expectedStats);
 
         // Act
-        EnergyStats actualStats = interactor.getAllEnergyStats(id);
+        EnergyStats actualStats = interactor.getEnergyStatsById(id);
 
         // Assert
         assertEquals(expectedStats, actualStats);

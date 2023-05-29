@@ -18,7 +18,7 @@ public class ReadEnergyStatsInteractor {
         return repository.getAll();
     }
 
-    public EnergyStats getAllEnergyStats(String id) throws IOException {
+    public EnergyStats getEnergyStatsById(String id) throws IOException {
         return repository.getById(id);
     }
 }
