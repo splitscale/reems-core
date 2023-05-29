@@ -39,7 +39,7 @@ jobs:
           job_url="$server_url/$repo/actions/runs/$run_id"
           echo "JOB_URL=$job_url" >> $GITHUB_ENV
 
-          echo "NOTIFICATION_INFO=${{ github.event.head_commit.message }}" >> $GITHUB_ENV
+          echo "NOTIFICATION_INFO=${{ github.event.pull_request.action }}" >> $GITHUB_ENV
 
       - name: Check if job succeeded
         if: ${{ success() }}
