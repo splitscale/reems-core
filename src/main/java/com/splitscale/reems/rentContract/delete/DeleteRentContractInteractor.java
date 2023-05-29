@@ -1,17 +1,18 @@
 package com.splitscale.reems.rentContract.delete;
 
-import com.splitscale.reems.repositories.PropertyRepository;
+import com.splitscale.reems.repositories.RentContractRepository;
+
 import java.io.IOException;
 
 public class DeleteRentContractInteractor {
 
-  private PropertyRepository repository;
+  private RentContractRepository repository;
 
-  public DeleteRentContractInteractor(PropertyRepository repository) {
+  public DeleteRentContractInteractor(RentContractRepository repository) {
     this.repository = repository;
   }
 
-  public void deleteProperty(String id) throws IOException {
+  public void deleteRentContract(String id) throws IOException {
     repository.delete(id);
   }
 }
