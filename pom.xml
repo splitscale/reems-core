@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.splitscale.reems</groupId>
-  <artifactId>reems-core</artifactId>
+  <artifactId>core</artifactId>
   <version>1.0</version>
 
   <distributionManagement>
     <repository>
       <id>github</id>
       <name>GitHub splitscale Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/splitscale/reems-core</url>
+      <url>https://maven.pkg.github.com/splitscale/core</url>
     </repository>
   </distributionManagement>
 
-  <name>reems-core</name>
+  <name>core</name>
   <url>http://splitscale.systems</url>
 
   <properties>
