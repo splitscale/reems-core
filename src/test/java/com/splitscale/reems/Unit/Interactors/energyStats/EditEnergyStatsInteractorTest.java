@@ -31,7 +31,7 @@ class EditEnergyStatsInteractorTest {
         EnergyStats energyStats = new EnergyStats(); // Create a sample EnergyStats object
 
         // Act
-        interactor.editEnvironmentalHazard(energyStats);
+        interactor.editEnergyStats(energyStats);
 
         // Assert
         verify(repository, times(1)).update(energyStats);
