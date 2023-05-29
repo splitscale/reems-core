@@ -1,8 +1,9 @@
 package com.splitscale.reems.Unit.Interactors.rentContract;
 
-import com.splitscale.reems.properties.Property;
+import com.splitscale.reems.rentContract.RentContract;
 import com.splitscale.reems.rentContract.edit.EditRentContractInteractor;
-import com.splitscale.reems.repositories.PropertyRepository;
+import com.splitscale.reems.repositories.RentContractRepository;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -15,7 +16,7 @@ import static org.mockito.Mockito.*;
 public class EditRentContractInteractorTest {
 
     @Mock
-    private PropertyRepository mockRepository;
+    private RentContractRepository mockRepository;
 
     private EditRentContractInteractor interactor;
 
@@ -26,15 +27,17 @@ public class EditRentContractInteractorTest {
     }
 
     @Test
-    public void testEditProperty() throws IOException {
-        Property property = new Property();
+    public void testEditRentContract() throws IOException {
+        // Create a RentContract object
+        RentContract rentContract = new RentContract("1", null, null);
+
         // Set up any necessary preconditions or stub any required behaviors
 
-        interactor.editProperty(property);
+        interactor.editRentContract(rentContract);
 
         // Verify that the repository's update method was called with the correct
-        // property
-        verify(mockRepository).update(property);
+        // RentContract object
+        verify(mockRepository).update(rentContract);
 
         // Add additional assertions or verifications as needed
     }
