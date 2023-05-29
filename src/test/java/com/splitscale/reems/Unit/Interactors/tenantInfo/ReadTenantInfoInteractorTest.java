@@ -30,8 +30,8 @@ class ReadTenantInfoInteractorTest {
   @Test
   void getAllTenantInfo_shouldReturnAllTenantInfo() throws IOException {
     List<TenantInfo> expectedTenantInfoList = new ArrayList<>();
-    expectedTenantInfoList.add(new TenantInfo(null, null, null));
-    expectedTenantInfoList.add(new TenantInfo(null, null, null));
+    expectedTenantInfoList.add(new TenantInfo(null, null, null, null));
+    expectedTenantInfoList.add(new TenantInfo(null, null, null, null));
 
     when(repository.getAll()).thenReturn(expectedTenantInfoList);
 
@@ -44,10 +44,8 @@ class ReadTenantInfoInteractorTest {
   void getTenantInfoById_shouldReturnTenantInfoById() throws IOException {
     String tenantInfoId = "123";
     TenantInfo expectedTenantInfo = new TenantInfo(
-      tenantInfoId,
-      tenantInfoId,
-      tenantInfoId
-    );
+        tenantInfoId,
+        tenantInfoId, null, null);
 
     when(repository.getById(tenantInfoId)).thenReturn(expectedTenantInfo);
 
