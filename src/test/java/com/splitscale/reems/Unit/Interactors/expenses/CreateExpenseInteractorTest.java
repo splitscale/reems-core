@@ -27,7 +27,7 @@ class CreateExpenseInteractorTest {
 
   @Test
   void createExpense_ShouldReturnAddedExpense() throws IOException {
-    ExpenseRequest expenseRequest = new ExpenseRequest(null);
+    ExpenseRequest expenseRequest = new ExpenseRequest(null, null, null, null, null);
     String expectedExpenseId = "213";
     when(mockRepository.add(expenseRequest)).thenReturn(expectedExpenseId);
 

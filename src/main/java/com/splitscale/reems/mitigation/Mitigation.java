@@ -5,33 +5,28 @@ import java.util.Date;
 public class Mitigation {
 
   private String id;
-  private String hazardId;
-  private String task;
-  private String description;
-  private String cost;
+  private String expenseId;
   private Date created;
-  private Date modified;
+  private Date edited;
+  private String title;
+  private String description;
+  private Double cost;
+  private String status;
 
   public Mitigation() {
-    //default
+    // default
   }
 
-  public Mitigation(
-    String id,
-    String hazardId,
-    String task,
-    String description,
-    String cost,
-    Date created,
-    Date modified
-  ) {
+  public Mitigation(String id, String expenseId, Date created, Date edited, String title, String description,
+      Double cost, String status) {
     this.id = id;
-    this.hazardId = hazardId;
-    this.task = task;
+    this.expenseId = expenseId;
+    this.created = created;
+    this.edited = edited;
+    this.title = title;
     this.description = description;
     this.cost = cost;
-    this.created = created;
-    this.modified = modified;
+    this.status = status;
   }
 
   public String getId() {
@@ -42,36 +37,12 @@ public class Mitigation {
     this.id = id;
   }
 
-  public String getHazardId() {
-    return hazardId;
+  public String getExpenseId() {
+    return expenseId;
   }
 
-  public void setHazardId(String hazardId) {
-    this.hazardId = hazardId;
-  }
-
-  public String getTask() {
-    return task;
-  }
-
-  public void setTask(String task) {
-    this.task = task;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getCost() {
-    return cost;
-  }
-
-  public void setCost(String cost) {
-    this.cost = cost;
+  public void setExpenseId(String expenseId) {
+    this.expenseId = expenseId;
   }
 
   public Date getCreated() {
@@ -82,11 +53,44 @@ public class Mitigation {
     this.created = created;
   }
 
-  public Date getModified() {
-    return modified;
+  public Date getEdited() {
+    return edited;
   }
 
-  public void setModified(Date modified) {
-    this.modified = modified;
+  public void setEdited(Date edited) {
+    this.edited = edited;
   }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Double getCost() {
+    return cost;
+  }
+
+  public void setCost(Double cost) {
+    this.cost = cost;
+  }
+
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
 }

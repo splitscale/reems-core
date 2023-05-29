@@ -44,13 +44,6 @@ class ReadMitigationInteractorTest {
   void getMitigationById_shouldReturnMitigationById() throws IOException {
     String mitigationId = "123";
     Mitigation expectedMitigation = new Mitigation(
-      mitigationId,
-      "1233",
-      "Mitigate hazard",
-      "Sample description",
-      "100",
-      null,
-      null
     ); // Create a sample Mitigation object for testing
     when(repository.getById(mitigationId)).thenReturn(expectedMitigation);
 
