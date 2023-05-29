@@ -1,8 +1,8 @@
 package com.splitscale.reems.Unit.Interactors.rentContract;
 
-import com.splitscale.reems.properties.Property;
+import com.splitscale.reems.rentContract.RentContract;
 import com.splitscale.reems.rentContract.read.ReadRentContractInteractor;
-import com.splitscale.reems.repositories.PropertyRepository;
+import com.splitscale.reems.repositories.RentContractRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
@@ -19,7 +19,7 @@ import org.mockito.MockitoAnnotations;
 public class ReadRentContractInteractorTest {
 
     @Mock
-    private PropertyRepository mockRepository;
+    private RentContractRepository mockRepository;
 
     private ReadRentContractInteractor interactor;
 
@@ -30,32 +30,32 @@ public class ReadRentContractInteractorTest {
     }
 
     @Test
-    public void testGetAllProperty() throws IOException {
-        List<Property> expectedProperties = new ArrayList<>();
-        // Add some test properties to the expectedProperties list
+    public void testGetAllRentContract() throws IOException {
+        List<RentContract> expectedRentContracts = new ArrayList<>();
+        // Add some test rent contracts to the expectedRentContracts list
 
-        when(mockRepository.getAll()).thenReturn(expectedProperties);
+        when(mockRepository.getAll()).thenReturn(expectedRentContracts);
 
-        List<Property> actualProperties = interactor.getAllProperty();
+        List<RentContract> actualRentContracts = interactor.getAllRentContract();
 
-        assertEquals(expectedProperties, actualProperties);
+        assertEquals(expectedRentContracts, actualRentContracts);
         // Verify that the repository's getAll() method was called
         verify(mockRepository).getAll();
     }
 
     @Test
     public void testGetById() throws IOException {
-        String propertyId = "123";
-        Property expectedProperty = new Property();
+        String rentContractId = "123";
+        RentContract expectedRentContract = new RentContract();
         // Set up any necessary preconditions or stub any required behaviors
 
-        when(mockRepository.getById(propertyId)).thenReturn(expectedProperty);
+        when(mockRepository.getById(rentContractId)).thenReturn(expectedRentContract);
 
-        Property actualProperty = interactor.getById(propertyId);
+        RentContract actualRentContract = interactor.getById(rentContractId);
 
-        assertEquals(expectedProperty, actualProperty);
+        assertEquals(expectedRentContract, actualRentContract);
         // Verify that the repository's getById() method was called with the correct
-        // propertyId
-        verify(mockRepository).getById(propertyId);
+        // rentContractId
+        verify(mockRepository).getById(rentContractId);
     }
 }

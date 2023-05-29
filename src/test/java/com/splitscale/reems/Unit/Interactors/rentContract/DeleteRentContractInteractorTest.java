@@ -1,7 +1,8 @@
 package com.splitscale.reems.Unit.Interactors.rentContract;
 
 import com.splitscale.reems.rentContract.delete.DeleteRentContractInteractor;
-import com.splitscale.reems.repositories.PropertyRepository;
+import com.splitscale.reems.repositories.RentContractRepository;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -14,7 +15,7 @@ import static org.mockito.Mockito.*;
 class DeleteRentContractInteractorTest {
 
     @Mock
-    private PropertyRepository repository;
+    private RentContractRepository repository;
 
     private DeleteRentContractInteractor interactor;
 
@@ -30,7 +31,7 @@ class DeleteRentContractInteractorTest {
         String id = "123";
 
         // Act
-        interactor.deleteProperty(id);
+        interactor.deleteRentContract(id);;
 
         // Assert
         // Verify that the delete method of the repository was called exactly once with
