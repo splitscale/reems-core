@@ -32,7 +32,7 @@ class CreateMitigationInteractorTest {
     MitigationRequest mitigationRequest = new MitigationRequest(
       "Mitigation 1",
       "Sample mitigation desicription",
-      "100"
+      null, null, "100", null, null, null
     );
     String expectedMitigationId = "123";
 

@@ -5,33 +5,28 @@ import java.util.Date;
 public class Mitigation {
 
   private String id;
-  private String hazardId;
-  private String task;
+  private String expenseId;
+  private Date created;
+  private Date edited;
+  private String title;
   private String description;
   private String cost;
-  private Date created;
-  private Date modified;
+  private String status;
 
   public Mitigation() {
-    //default
+    // default
   }
 
-  public Mitigation(
-    String id,
-    String hazardId,
-    String task,
-    String description,
-    String cost,
-    Date created,
-    Date modified
-  ) {
+  public Mitigation(String id, String expenseId, Date created, Date edited, String title, String description,
+      String cost, String status) {
     this.id = id;
-    this.hazardId = hazardId;
-    this.task = task;
+    this.expenseId = expenseId;
+    this.created = created;
+    this.edited = edited;
+    this.title = title;
     this.description = description;
     this.cost = cost;
-    this.created = created;
-    this.modified = modified;
+    this.status = status;
   }
 
   public String getId() {
@@ -42,20 +37,36 @@ public class Mitigation {
     this.id = id;
   }
 
-  public String getHazardId() {
-    return hazardId;
+  public String getExpenseId() {
+    return expenseId;
   }
 
-  public void setHazardId(String hazardId) {
-    this.hazardId = hazardId;
+  public void setExpenseId(String expenseId) {
+    this.expenseId = expenseId;
   }
 
-  public String getTask() {
-    return task;
+  public Date getCreated() {
+    return created;
   }
 
-  public void setTask(String task) {
-    this.task = task;
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getEdited() {
+    return edited;
+  }
+
+  public void setEdited(Date edited) {
+    this.edited = edited;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
   }
 
   public String getDescription() {
@@ -74,19 +85,12 @@ public class Mitigation {
     this.cost = cost;
   }
 
-  public Date getCreated() {
-    return created;
+  public String getStatus() {
+    return status;
   }
 
-  public void setCreated(Date created) {
-    this.created = created;
+  public void setStatus(String status) {
+    this.status = status;
   }
 
-  public Date getModified() {
-    return modified;
-  }
-
-  public void setModified(Date modified) {
-    this.modified = modified;
-  }
 }

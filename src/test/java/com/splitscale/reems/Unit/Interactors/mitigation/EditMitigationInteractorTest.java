@@ -28,13 +28,6 @@ class EditMitigationInteractorTest {
   @Test
   void editMitigation_shouldInvokeRepositoryUpdate() throws IOException {
     Mitigation mitigation = new Mitigation(
-      "01",
-      "0123",
-      "Implement",
-      "Implement mitigation",
-      "100",
-      null,
-      null
     );
 
     interactor.editMitigation(mitigation);
