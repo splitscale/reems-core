@@ -13,7 +13,6 @@ public class EnvironmentalHazard {
   private String description;
   private String riskLevel;
 
-  
   public EnvironmentalHazard() {
     // default
   }

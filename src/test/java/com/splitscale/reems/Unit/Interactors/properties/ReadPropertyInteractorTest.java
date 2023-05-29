@@ -30,7 +30,7 @@ class ReadPropertyInteractorTest {
 
   @Test
   void getAllProperty_shouldReturnListOfProperties() throws IOException {
-    List<Property> expectedProperties = new ArrayList<>(); 
+    List<Property> expectedProperties = new ArrayList<>();
     when(repository.getAll()).thenReturn(expectedProperties);
 
     List<Property> actualProperties = interactor.getAllProperty();
@@ -43,11 +43,10 @@ class ReadPropertyInteractorTest {
   void getPropertyById_shouldReturnPropertyById() throws IOException {
     String propertyId = "123";
     Property expectedProperty = new Property(
-      propertyId,
-      null,
-      null,
-      propertyId
-    ); // Create a sample Property object for testing
+        propertyId,
+        null,
+        null,
+        propertyId, propertyId, propertyId); // Create a sample Property object for testing
     when(repository.getById(propertyId)).thenReturn(expectedProperty);
 
     Property actualProperty = interactor.getById(propertyId);

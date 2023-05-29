@@ -5,19 +5,21 @@ import java.util.Date;
 public class Expense {
 
   private String id;
-  private String expense;
   private Date created;
   private Date modified;
+  private String value;
+  private String unit;
 
   public Expense() {
-    //default
+    // default
   }
 
-  public Expense(String id, String expense, Date created, Date modified) {
+  public Expense(String id, Date created, Date modified, String value, String unit) {
     this.id = id;
-    this.expense = expense;
     this.created = created;
     this.modified = modified;
+    this.value = value;
+    this.unit = unit;
   }
 
   public String getId() {
@@ -26,14 +28,6 @@ public class Expense {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public String getExpense() {
-    return expense;
-  }
-
-  public void setExpense(String expense) {
-    this.expense = expense;
   }
 
   public Date getCreated() {
@@ -52,6 +46,20 @@ public class Expense {
     this.modified = modified;
   }
 
-public void setDescription(String string) {
-}
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public String getUnit() {
+    return unit;
+  }
+
+  public void setUnit(String unit) {
+    this.unit = unit;
+  }
+
 }

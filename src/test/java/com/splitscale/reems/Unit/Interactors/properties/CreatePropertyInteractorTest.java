@@ -28,7 +28,7 @@ class CreatePropertyInteractorTest {
 
   @Test
   void createProperty_shouldReturnAddedProperty() throws IOException {
-    PropertyRequest propertyRequest = new PropertyRequest(null, null, null);
+    PropertyRequest propertyRequest = new PropertyRequest(null, null, null, null, null, null);
     String expectedPropertyId = "123";
 
     when(repository.add(propertyRequest)).thenReturn(expectedPropertyId);

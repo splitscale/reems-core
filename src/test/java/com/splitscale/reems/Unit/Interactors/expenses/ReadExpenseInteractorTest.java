@@ -31,8 +31,8 @@ class ReadExpenseInteractorTest {
   @Test
   void getAllProperty_shouldReturnListOfExpenses() throws IOException {
     List<Expense> expectedExpenses = new ArrayList<>();
-    expectedExpenses.add(new Expense("215", "Expense 1", null, null));
-    expectedExpenses.add(new Expense("216", "Expense 2", null, null));
+    expectedExpenses.add(new Expense());
+    expectedExpenses.add(new Expense());
 
     when(repository.getAll()).thenReturn(expectedExpenses);
 
@@ -44,7 +44,7 @@ class ReadExpenseInteractorTest {
   @Test
   void getById_shouldReturnExpenseWithMatchingId() throws IOException {
     String expenseId = "214";
-    Expense expectedExpense = new Expense(expenseId, "New Expense", null, null);
+    Expense expectedExpense = new Expense();
 
     when(repository.getById(expenseId)).thenReturn(expectedExpense);
 

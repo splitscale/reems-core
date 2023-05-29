@@ -27,7 +27,7 @@ class EditPropertyInteractorTest {
 
   @Test
   void editProperty_shouldInvokeRepositoryUpdate() throws IOException {
-    Property property = new Property(null, null, null, null);
+    Property property = new Property(null, null, null, null, null, null);
 
     interactor.editProperty(property);
 
