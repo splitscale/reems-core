@@ -14,27 +14,27 @@ import static org.mockito.Mockito.*;
 
 class EditEnergyStatsInteractorTest {
 
-    @Mock
-    private EnergyStatsRepository repository;
+  @Mock
+  private EnergyStatsRepository repository;
 
-    private EditEnergyStatsInteractor interactor;
+  private EditEnergyStatsInteractor interactor;
 
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-        interactor = new EditEnergyStatsInteractor(repository);
-    }
+  @BeforeEach
+  void setUp() {
+    MockitoAnnotations.openMocks(this);
+    interactor = new EditEnergyStatsInteractor(repository);
+  }
 
-    @Test
-    void testEditEnvironmentalHazard() throws IOException {
-        // Arrange
-        EnergyStats energyStats = new EnergyStats(); // Create a sample EnergyStats object
+  @Test
+  void testEditEnergyStats() throws IOException {
+    // Arrange
+    EnergyStats energyStats = new EnergyStats(); // Create a sample EnergyStats object
 
-        // Act
-        interactor.editEnvironmentalHazard(energyStats);
+    // Act
+    interactor.editEnergyStats(energyStats);
 
-        // Assert
-        verify(repository, times(1)).update(energyStats);
-        // You can add more assertions if necessary
-    }
+    // Assert
+    verify(repository, times(1)).update(energyStats);
+    // You can add more assertions if necessary
+  }
 }

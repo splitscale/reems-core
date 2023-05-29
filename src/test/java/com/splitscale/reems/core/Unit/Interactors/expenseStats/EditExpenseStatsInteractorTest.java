@@ -1,8 +1,11 @@
 package com.splitscale.reems.core.Unit.Interactors.expenseStats;
 
+import com.splitscale.reems.core.expenseStats.ExpenseStats;
 import com.splitscale.reems.core.expenseStats.edit.EditExpenseStatsInteractor;
 import com.splitscale.reems.core.expenses.Expense;
 import com.splitscale.reems.core.repositories.ExpenseRepository;
+import com.splitscale.reems.core.repositories.ExpenseStatsRepository;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -15,32 +18,33 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class EditExpenseStatsInteractorTest {
 
-    @Mock
-    private ExpenseRepository mockRepository;
-    private EditExpenseStatsInteractor interactor;
+  @Mock
+  private ExpenseStatsRepository mockRepository;
 
-    @BeforeEach
-    public void setup() {
-        MockitoAnnotations.openMocks(this);
-        interactor = new EditExpenseStatsInteractor(mockRepository);
-    }
+  private EditExpenseStatsInteractor interactor;
 
-    @Test
-    public void editExpense_Success() throws IOException {
-        Expense expense = new Expense(/* initialize with necessary values */);
+  @BeforeEach
+  public void setup() {
+    MockitoAnnotations.openMocks(this);
+    interactor = new EditExpenseStatsInteractor(mockRepository);
+  }
 
-        interactor.editExpense(expense);
+  @Test
+  public void editExpense_Success() throws IOException {
+    ExpenseStats expense = new ExpenseStats();
 
-        Mockito.verify(mockRepository).update(expense);
-    }
+    interactor.editExpense(expense);
 
-    @Test
-    public void editExpense_ExceptionThrown() throws IOException {
-        Expense expense = new Expense(/* initialize with necessary values */);
-        IOException exception = new IOException("Update failed.");
+    Mockito.verify(mockRepository).update(expense);
+  }
 
-        Mockito.doThrow(exception).when(mockRepository).update(expense);
+  @Test
+  public void editExpense_ExceptionThrown() throws IOException {
+    ExpenseStats expense = new ExpenseStats();
+    IOException exception = new IOException("Update failed.");
 
-        assertThrows(IOException.class, () -> interactor.editExpense(expense));
-    }
+    Mockito.doThrow(exception).when(mockRepository).update(expense);
+
+    assertThrows(IOException.class, () -> interactor.editExpense(expense));
+  }
 }

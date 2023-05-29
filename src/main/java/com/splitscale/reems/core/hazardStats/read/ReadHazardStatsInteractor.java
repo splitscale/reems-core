@@ -10,6 +10,14 @@ public class ReadHazardStatsInteractor {
 
   HazardStatsRepository repository;
 
+  public ReadHazardStatsInteractor() {
+    // default constructor
+  }
+
+  public ReadHazardStatsInteractor(HazardStatsRepository repository) {
+    this.repository = repository;
+  }
+
   public List<HazardStats> getAllHazardStats() throws IOException {
     return repository.getAll();
   }

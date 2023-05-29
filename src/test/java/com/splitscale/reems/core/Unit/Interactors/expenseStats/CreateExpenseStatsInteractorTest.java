@@ -5,36 +5,44 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import com.splitscale.reems.core.expenseStats.ExpenseStatsRequest;
 import com.splitscale.reems.core.expenseStats.create.CreateExpenseStatsInteractor;
 import com.splitscale.reems.core.expenses.ExpenseRequest;
 import com.splitscale.reems.core.repositories.ExpenseRepository;
+import com.splitscale.reems.core.repositories.ExpenseStatsRepository;
+
 import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 public class CreateExpenseStatsInteractorTest {
 
-    private CreateExpenseStatsInteractor interactor;
-    private ExpenseRepository repository;
+  @Mock
+  private CreateExpenseStatsInteractor interactor;
 
-    @BeforeEach
-    public void setUp() {
-        repository = mock(ExpenseRepository.class);
-        interactor = new CreateExpenseStatsInteractor(repository);
-    }
+  @Mock
+  private ExpenseStatsRepository repository;
 
-    @Test
-    public void testCreateExpense() throws IOException {
-        // Arrange
-        ExpenseRequest expenseRequest = new ExpenseRequest(/* provide necessary parameters */);
-        String expectedExpenseId = "12345";
-        when(repository.add(expenseRequest)).thenReturn(expectedExpenseId);
+  @BeforeEach
+  public void setUp() {
+    MockitoAnnotations.openMocks(this);
+    interactor = new CreateExpenseStatsInteractor(repository);
+  }
 
-        // Act
-        String actualExpenseId = interactor.createExpense(expenseRequest);
+  @Test
+  public void testCreateExpense() throws IOException {
+    // Arrange
+    ExpenseStatsRequest expenseRequest = new ExpenseStatsRequest(/* provide necessary parameters */);
+    String expectedExpenseId = "12345";
+    when(repository.add(expenseRequest)).thenReturn(expectedExpenseId);
 
-        // Assert
-        assertEquals(expectedExpenseId, actualExpenseId);
-        verify(repository).add(expenseRequest);
-    }
+    // Act
+    String actualExpenseId = interactor.createExpenseStats(expenseRequest);
+
+    // Assert
+    assertEquals(expectedExpenseId, actualExpenseId);
+    verify(repository).add(expenseRequest);
+  }
 }
