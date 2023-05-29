@@ -1,6 +1,5 @@
 package com.splitscale.reems.repositories;
 
-import com.splitscale.reems.expenseStats.ExpenseStats;
 import com.splitscale.reems.hazardStats.HazardStats;
 import com.splitscale.reems.hazardStats.HazardStatsRequest;
 
@@ -10,7 +9,7 @@ import java.util.List;
 public interface HazardStatsRepository {
     public List<HazardStats> getAll() throws IOException;
 
-    public ExpenseStats getById(String id) throws IOException;
+    public HazardStats getById(String id) throws IOException;
 
     public String add(HazardStatsRequest hazardStatsRequest) throws IOException;
 
