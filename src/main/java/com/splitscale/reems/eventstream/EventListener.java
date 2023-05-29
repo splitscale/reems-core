@@ -1,5 +1,7 @@
 package com.splitscale.reems.eventstream;
 
-interface EventListener<T> {
-  void onEvent(Event<T> event);
+import java.io.IOException;
+
+public interface EventListener<T> {
+  void onEvent(Event<T> event) throws IOException;
 }
